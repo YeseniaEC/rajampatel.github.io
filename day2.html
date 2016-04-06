@@ -1,0 +1,2471 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Segoe UI";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+@font-face
+	{font-family:Verdana;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:Consolas;
+	panose-1:2 11 6 9 2 2 4 3 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+h2
+	{mso-style-link:"Heading 2 Char";
+	margin-right:0in;
+	margin-left:0in;
+	font-size:18.0pt;
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:#954F72;
+	text-decoration:underline;}
+p
+	{margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+p.MsoNoSpacing, li.MsoNoSpacing, div.MsoNoSpacing
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:.5in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:.5in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+span.apple-converted-space
+	{mso-style-name:apple-converted-space;}
+span.Heading2Char
+	{mso-style-name:"Heading 2 Char";
+	mso-style-link:"Heading 2";
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+@page WordSection1
+	{size:11.0in 8.5in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink="#954F72">
+
+<div class=WordSection1>
+
+<p class=MsoNormal><b><span style='font-size:14.0pt;line-height:107%'>Creating
+a database</span></b></p>
+
+<p style='margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;
+margin-bottom:.0001pt;text-indent:-.25in;line-height:13.5pt'><span
+style='font-size:10.0pt;font-family:"Segoe UI",sans-serif;color:#2A2A2A'>1.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-size:10.0pt;font-family:"Segoe UI",sans-serif;color:#2A2A2A'>In<span
+class=apple-converted-space>&nbsp;</span><strong><span style='font-family:"Segoe UI",sans-serif'>Object
+Explorer</span></strong>, connect to an instance of the SQL Server Database
+Engine and then expand that instance.</span></p>
+
+<p style='margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;
+margin-bottom:.0001pt;text-indent:-.25in;line-height:13.5pt'><span
+style='font-size:10.0pt;font-family:"Segoe UI",sans-serif;color:#2A2A2A'>2.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-size:10.0pt;font-family:"Segoe UI",sans-serif;color:#2A2A2A'>Right-click<span
+class=apple-converted-space>&nbsp;</span><strong><span style='font-family:"Segoe UI",sans-serif'>Databases</span></strong>,
+and then click<span class=apple-converted-space>&nbsp;</span><strong><span
+style='font-family:"Segoe UI",sans-serif'>New Database</span></strong>.</span></p>
+
+<p style='margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;
+margin-bottom:.0001pt;text-indent:-.25in;line-height:13.5pt'><span
+style='font-size:10.0pt;font-family:"Segoe UI",sans-serif;color:#2A2A2A'>3.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-size:10.0pt;font-family:"Segoe UI",sans-serif;color:#2A2A2A'>In<span
+class=apple-converted-space>&nbsp;</span><strong><span style='font-family:"Segoe UI",sans-serif'>New
+Database</span></strong>, enter a database name.</span></p>
+
+<p style='margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;
+margin-bottom:.0001pt;text-indent:-.25in;line-height:13.5pt'><span
+style='font-size:10.0pt;font-family:"Segoe UI",sans-serif;color:#2A2A2A'>4.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-size:10.0pt;font-family:"Segoe UI",sans-serif;color:#2A2A2A'>To
+create the database by accepting all default values, click<span
+class=apple-converted-space>&nbsp;</span><strong><span style='font-family:"Segoe UI",sans-serif'>OK</span></strong></span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><b><span style='font-size:14.0pt;line-height:107%'>Create
+Table</span></b></p>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <li class=MsoNormal style='color:#2A2A2A;margin-bottom:0in;margin-bottom:.0001pt;
+     line-height:13.5pt'><span style='font-size:10.0pt;font-family:"Segoe UI",sans-serif'>In&nbsp;<b>Object
+     Explorer</b>, connect to the instance of Database Engine that contains the
+     database to be modified.</span></li>
+ <li class=MsoNormal style='color:#2A2A2A;margin-bottom:0in;margin-bottom:.0001pt;
+     line-height:13.5pt'><span style='font-size:10.0pt;font-family:"Segoe UI",sans-serif'>In&nbsp;<b>Object
+     Explorer</b>, expand the&nbsp;<b>Databases</b>&nbsp;node and then expand
+     the database that will contain the new table.</span></li>
+ <li class=MsoNormal style='color:#2A2A2A;margin-bottom:0in;margin-bottom:.0001pt;
+     line-height:13.5pt'><span style='font-size:10.0pt;font-family:"Segoe UI",sans-serif'>In
+     Object Explorer, right-click the&nbsp;<b>Tables</b>&nbsp;node of your
+     database and then click&nbsp;<b>New Table</b>.</span></li>
+ <li class=MsoNormal style='color:#2A2A2A;margin-bottom:0in;margin-bottom:.0001pt;
+     line-height:13.5pt'><span style='font-size:10.0pt;font-family:"Segoe UI",sans-serif'>Type
+     column names, choose data types, and choose whether to allow nulls for
+     each column as shown in the following illustration.</span></li>
+</ol>
+
+<p class=MsoNormal style='margin-left:.5in;line-height:13.15pt'><img width=401
+height=170 id="Picture 4" src="day2_files/image001.png"></p>
+
+<ol style='margin-top:0in' start=5 type=1>
+ <li class=MsoNormal style='color:#2A2A2A;margin-bottom:0in;margin-bottom:.0001pt;
+     line-height:13.5pt'><span style='font-size:10.0pt;font-family:"Segoe UI",sans-serif'>To
+     specify more properties for a column, such as identity or computed column
+     values, click the column and in the column properties tab, choose the
+     appropriate properties.</span></li>
+</ol>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:13.5pt'><span
+style='font-size:10.0pt;font-family:"Segoe UI",sans-serif;color:#2A2A2A'>&nbsp;</span></p>
+
+<ol style='margin-top:0in' start=6 type=1>
+ <li class=MsoNormal style='color:#2A2A2A;margin-bottom:0in;margin-bottom:.0001pt;
+     line-height:13.5pt'><span style='font-size:10.0pt;font-family:"Segoe UI",sans-serif'>To
+     specify a column as a primary key, right-click the column and select&nbsp;<b>Set
+     Primary Key</b>. </span></li>
+ <li class=MsoNormal style='color:#2A2A2A;margin-bottom:0in;margin-bottom:.0001pt;
+     line-height:13.5pt'><span style='font-size:10.0pt;font-family:"Segoe UI",sans-serif'>To
+     create foreign key relationships, check constraints, or indexes,
+     right-click in the Table Designer pane and select an object from the list
+     as shown in the following illustration.</span></li>
+</ol>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+13.5pt'><span style='font-size:10.0pt;font-family:"Segoe UI",sans-serif;
+color:#2A2A2A'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b><span
+style='font-size:14.0pt;font-family:"Segoe UI",sans-serif;color:#2A2A2A'>&nbsp;</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b><span
+style='font-size:14.0pt;font-family:"Segoe UI",sans-serif;color:#2A2A2A'>Create
+Table using SQL</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+13.5pt'><span style='font-size:10.0pt;font-family:"Segoe UI",sans-serif;
+color:#2A2A2A'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>Create</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:blue'>table</span> Person</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:gray'>(</span><span style='font-size:9.5pt;font-family:Consolas'>PersonID
+<span style='color:blue'>numeric</span><span style='color:gray'>(</span>18<span
+style='color:gray'>,</span>0<span style='color:gray'>),</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>FirstName
+<span style='color:blue'>nvarchar</span><span style='color:gray'>(</span>50<span
+style='color:gray'>),</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>LastName
+<span style='color:blue'>nvarchar</span><span style='color:gray'>(</span>50<span
+style='color:gray'>))</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+13.5pt'><span style='font-size:10.0pt;font-family:"Segoe UI",sans-serif;
+color:#2A2A2A'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b><span
+style='font-size:14.0pt;font-family:"Segoe UI",sans-serif;color:#2A2A2A'>Insert
+Date in our Table</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>insert</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:blue'>into</span> person <span style='color:blue'>values </span><span
+style='color:gray'>(</span>1<span style='color:gray'>,</span><span
+style='color:red'>'Raj'</span><span style='color:gray'>,</span><span
+style='color:red'>'Patel'</span><span style='color:gray'>);</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>insert</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:blue'>into</span> person <span style='color:blue'>values </span><span
+style='color:gray'>(</span>2<span style='color:gray'>,</span><span
+style='color:red'>'Bob'</span><span style='color:gray'>,</span><span
+style='color:red'>'Marcotte'</span><span style='color:gray'>);</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><b><span style='font-size:14.0pt;font-family:Consolas'>Read
+Data from our table</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>select</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:gray'>*</span> <span style='color:blue'>from</span> person<span
+style='color:gray'>;</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+13.5pt'><span style='font-size:10.0pt;font-family:"Segoe UI",sans-serif;
+color:#2A2A2A'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:7.5pt;margin-right:0in;margin-bottom:7.5pt;
+margin-left:0in;line-height:normal;background:white'><b><span style='font-size:
+14.0pt;font-family:"Segoe UI",sans-serif;color:black'>SQL Server Data Types</span></b></p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none'>
+ <thead>
+  <tr>
+   <td style='border-top:solid black 1.0pt;border-left:solid black 1.0pt;
+   border-bottom:none;border-right:none;background:#333333;padding:2.25pt 1.5pt 1.5pt 7.5pt'>
+   <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+   0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><b><span
+   style='font-size:7.0pt;font-family:"Arial",sans-serif;color:white;
+   text-transform:uppercase'>DATATYPE</span></b></p>
+   </td>
+   <td style='border:none;border-top:solid black 1.0pt;background:#333333;
+   padding:2.25pt 1.5pt 1.5pt 7.5pt'>
+   <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+   0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><b><span
+   style='font-size:7.0pt;font-family:"Arial",sans-serif;color:white;
+   text-transform:uppercase'>MIN</span></b></p>
+   </td>
+   <td style='border:none;border-top:solid black 1.0pt;background:#333333;
+   padding:2.25pt 1.5pt 1.5pt 7.5pt'>
+   <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+   0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><b><span
+   style='font-size:7.0pt;font-family:"Arial",sans-serif;color:white;
+   text-transform:uppercase'>MAX</span></b></p>
+   </td>
+   <td style='border:none;border-top:solid black 1.0pt;background:#333333;
+   padding:2.25pt 1.5pt 1.5pt 7.5pt'>
+   <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+   0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><b><span
+   style='font-size:7.0pt;font-family:"Arial",sans-serif;color:white;
+   text-transform:uppercase'>STORAGE</span></b></p>
+   </td>
+   <td style='border:none;border-top:solid black 1.0pt;background:#333333;
+   padding:2.25pt 1.5pt 1.5pt 7.5pt'>
+   <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+   0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><b><span
+   style='font-size:7.0pt;font-family:"Arial",sans-serif;color:white;
+   text-transform:uppercase'>TYPE</span></b></p>
+   </td>
+   <td style='border-top:solid black 1.0pt;border-left:none;border-bottom:none;
+   border-right:solid black 1.0pt;background:#333333;padding:2.25pt 1.5pt 1.5pt 7.5pt'>
+   <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+   0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><b><span
+   style='font-size:7.0pt;font-family:"Arial",sans-serif;color:white;
+   text-transform:uppercase'>NOTES</span></b></p>
+   </td>
+  </tr>
+ </thead>
+ <tr>
+  <td valign=top style='border-top:#888888;border-left:#AAAAAA;border-bottom:
+  #888888;border-right:#AAAAAA;border-style:solid;border-width:1.0pt;
+  background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Bigint</span></p>
+  </td>
+  <td valign=top style='border-top:solid #888888 1.0pt;border-left:none;
+  border-bottom:solid #888888 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>-2^63</span></p>
+  </td>
+  <td valign=top style='border-top:solid #888888 1.0pt;border-left:none;
+  border-bottom:solid #888888 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>2^63-1</span></p>
+  </td>
+  <td valign=top style='border-top:solid #888888 1.0pt;border-left:none;
+  border-bottom:solid #888888 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>8 bytes</span></p>
+  </td>
+  <td valign=top style='border-top:solid #888888 1.0pt;border-left:none;
+  border-bottom:solid #888888 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Exact</span></p>
+  </td>
+  <td valign=top style='border-top:solid #888888 1.0pt;border-left:none;
+  border-bottom:solid #888888 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'></td>
+ </tr>
+ <tr>
+  <td valign=top style='border-top:none;border-left:solid #AAAAAA 1.0pt;
+  border-bottom:solid #888888 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Int</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>-2,147,483,648</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>2,147,483,647</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>4 bytes</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Exact</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'></td>
+ </tr>
+ <tr>
+  <td valign=top style='border-top:none;border-left:solid #AAAAAA 1.0pt;
+  border-bottom:solid #888888 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Smallint</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>-32,768</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>32,767</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>2 bytes</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Exact</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'></td>
+ </tr>
+ <tr>
+  <td valign=top style='border-top:none;border-left:solid #AAAAAA 1.0pt;
+  border-bottom:solid #888888 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Tinyint</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>0</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>255</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>1 bytes</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Exact</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'></td>
+ </tr>
+ <tr>
+  <td valign=top style='border-top:none;border-left:solid #AAAAAA 1.0pt;
+  border-bottom:solid #888888 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Bit</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>0</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>1</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>1 to 8 bit columns in
+  the same table requires a total of 1 byte, 9 to 16 bits = 2 bytes, etc...</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Exact</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'></td>
+ </tr>
+ <tr>
+  <td valign=top style='border-top:none;border-left:solid #AAAAAA 1.0pt;
+  border-bottom:solid #888888 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Decimal</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>-10^38+1</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>10^38–1</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Precision 1-9 = 5
+  bytes, precision 10-19 = 9 bytes, precision 20-28 = 13 bytes, precision 29-38
+  = 17 bytes</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Exact</span></p>
+  </td>
+  <td rowspan=2 valign=top style='border-top:none;border-left:none;border-bottom:
+  solid #888888 1.0pt;border-right:solid #AAAAAA 1.0pt;background:white;
+  padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>The Decimal and the
+  Numeric data type is exactly the same. Precision is the total number of
+  digits. Scale is the number of decimals. For both the minimum is 1 and the
+  maximum is 38.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border-top:none;border-left:solid #AAAAAA 1.0pt;
+  border-bottom:solid #888888 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Numeric</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>same as Decimal</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>same as Decimal</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>same as Decimal</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Exact</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border-top:none;border-left:solid #AAAAAA 1.0pt;
+  border-bottom:solid #888888 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Money</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>-2^63 / 10000</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>2^63-1 / 10000</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>8 bytes</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Exact</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'></td>
+ </tr>
+ <tr>
+  <td valign=top style='border-top:none;border-left:solid #AAAAAA 1.0pt;
+  border-bottom:solid #888888 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Smallmoney</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>-214,748.3648</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>214,748.3647</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>4 bytes</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Exact</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'></td>
+ </tr>
+ <tr>
+  <td valign=top style='border-top:none;border-left:solid #AAAAAA 1.0pt;
+  border-bottom:solid #888888 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Float</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>-1.79E + 308</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>1.79E + 308</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>4 bytes when precision
+  is less than 25 and 8 bytes when precision is 25 through 53</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Approx</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Precision is specified
+  from 1 to 53.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border-top:none;border-left:solid #AAAAAA 1.0pt;
+  border-bottom:solid #888888 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Real</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>-3.40E + 38</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>3.40E + 38</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>4 bytes</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Approx</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Precision is fixed to
+  7.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border-top:none;border-left:solid #AAAAAA 1.0pt;
+  border-bottom:solid #888888 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Datetime</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>1753-01-01
+  00:00:00.000</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>9999-12-31
+  23:59:59.997</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>8 bytes</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Datetime</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>If you are running SQL
+  Server 2008 or later and need milliseconds precision, use datetime2(3)
+  instead to save 1 byte.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border-top:none;border-left:solid #AAAAAA 1.0pt;
+  border-bottom:solid #888888 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Smalldatetime</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>1900-01-01 00:00</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>2079-06-06 23:59</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'></td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Datetime</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'></td>
+ </tr>
+ <tr>
+  <td valign=top style='border-top:none;border-left:solid #AAAAAA 1.0pt;
+  border-bottom:solid #888888 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Date</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>0001-01-01</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>9999-12-31</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>3 bytes</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Datetime</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'></td>
+ </tr>
+ <tr>
+  <td valign=top style='border-top:none;border-left:solid #AAAAAA 1.0pt;
+  border-bottom:solid #888888 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Time</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>00:00:00.0000000</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>23:59:59.9999999</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'></td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Datetime</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Specifying the
+  precision is possible. TIME(3) will have milliseconds precision. TIME(7) is
+  the highest and the default precision. Casting values to a lower precision
+  will round the value.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border-top:none;border-left:solid #AAAAAA 1.0pt;
+  border-bottom:solid #888888 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Datetime2</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>0001-01-01
+  00:00:00.0000000</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>9999-12-31
+  23:59:59.9999999</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Presicion 1-2 = 6
+  bytes precision 3-4 = 7 bytes precision 5-7 = 8 bytes</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Datetime</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Combines the date
+  datatype and the time datatype into one. The precision logic is the same as
+  for the time datatype.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border-top:none;border-left:solid #AAAAAA 1.0pt;
+  border-bottom:solid #888888 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Datetimeoffset</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>0001-01-01
+  00:00:00.0000000 -14:00</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>9999-12-31
+  23:59:59.9999999 +14:00</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Presicion 1-2 = 8
+  bytes precision 3-4 = 9 bytes precision 5-7 = 10 bytes</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Datetime</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Is a datetime2
+  datatype with the UTC offset appended.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border-top:none;border-left:solid #AAAAAA 1.0pt;
+  border-bottom:solid #888888 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Char</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>0 chars</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>8000 chars</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Defined width</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>String</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Fixed width</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border-top:none;border-left:solid #AAAAAA 1.0pt;
+  border-bottom:solid #888888 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Varchar</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>0 chars</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>8000 chars</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>2 bytes + number of
+  chars</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>String</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Variable width</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border-top:none;border-left:solid #AAAAAA 1.0pt;
+  border-bottom:solid #888888 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Varchar(max)</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>0 chars</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>2^31 chars</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>2 bytes + number of
+  chars</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>String</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Variable width</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border-top:none;border-left:solid #AAAAAA 1.0pt;
+  border-bottom:solid #888888 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Text</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>0 chars</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>2,147,483,647 chars</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>4 bytes + number of
+  chars</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>String</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Variable width</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border-top:none;border-left:solid #AAAAAA 1.0pt;
+  border-bottom:solid #888888 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Nchar</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>0 chars</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>4000 chars</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Defined width x 2</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Unicode</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Fixed width</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border-top:none;border-left:solid #AAAAAA 1.0pt;
+  border-bottom:solid #888888 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Nvarchar</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>0 chars</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>4000 chars</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'></td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Unicode</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Variable width</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border-top:none;border-left:solid #AAAAAA 1.0pt;
+  border-bottom:solid #888888 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Nvarchar(max)</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>0 chars</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>2^30 chars</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'></td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Unicode</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Variable width</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border-top:none;border-left:solid #AAAAAA 1.0pt;
+  border-bottom:solid #888888 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Ntext</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>0 chars</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>1,073,741,823 chars</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'></td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Unicode</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Variable width</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border-top:none;border-left:solid #AAAAAA 1.0pt;
+  border-bottom:solid #888888 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Binary</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>0 bytes</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>8000 bytes</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'></td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Binary</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Fixed width</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border-top:none;border-left:solid #AAAAAA 1.0pt;
+  border-bottom:solid #888888 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Varbinary</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>0 bytes</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>8000 bytes</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'></td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Binary</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Variable width</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border-top:none;border-left:solid #AAAAAA 1.0pt;
+  border-bottom:solid #888888 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Varbinary(max)</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>0 bytes</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>2^31 bytes</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'></td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Binary</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Variable width</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border-top:none;border-left:solid #AAAAAA 1.0pt;
+  border-bottom:solid #888888 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Image</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>0 bytes</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>2,147,483,647 bytes</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'></td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Binary</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Variable width. Prefer
+  to use the varbinary(max) type as the image type will be removed in future
+  versions.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border-top:none;border-left:solid #AAAAAA 1.0pt;
+  border-bottom:solid #888888 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Sql_variant</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'></td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'></td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'></td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Other</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Stores values of
+  various SQL Server-supported data types, except text, ntext, and timestamp.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border-top:none;border-left:solid #AAAAAA 1.0pt;
+  border-bottom:solid #888888 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Timestamp</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'></td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'></td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'></td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Other</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Stores a database-wide
+  unique number that gets updated every time a row gets updated.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border-top:none;border-left:solid #AAAAAA 1.0pt;
+  border-bottom:solid #888888 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Uniqueidentifier</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'></td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'></td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'></td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Other</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Stores a globally
+  unique identifier (GUID).</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border-top:none;border-left:solid #AAAAAA 1.0pt;
+  border-bottom:solid #888888 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Xml</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'></td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'></td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'></td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Other</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Stores XML data. You
+  can store xml instances in a column or a variable.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border-top:none;border-left:solid #AAAAAA 1.0pt;
+  border-bottom:solid #888888 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Cursor</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'></td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'></td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'></td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Other</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:white;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>A reference to a
+  cursor.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border-top:none;border-left:solid #AAAAAA 1.0pt;
+  border-bottom:solid #888888 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Table</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'></td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'></td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'></td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Other</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #888888 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;background:#DDDDDD;padding:2.25pt 3.0pt 1.5pt 3.0pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in;margin-bottom:.0001pt;line-height:14.65pt'><span
+  style='font-size:8.0pt;font-family:"Arial",sans-serif'>Stores a result set
+  for later processing.</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><b><span style='font-size:14.0pt;font-family:"Segoe UI",sans-serif;
+color:black'>Add a primary key</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>Create</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:blue'>table</span> Person</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:gray'>(</span><span style='font-size:9.5pt;font-family:Consolas'>PersonID
+<span style='color:blue'>numeric</span><span style='color:gray'>(</span>18<span
+style='color:gray'>,</span>0<span style='color:gray'>),</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>FirstName
+<span style='color:blue'>nvarchar</span><span style='color:gray'>(</span>50<span
+style='color:gray'>),</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>LastName
+<span style='color:blue'>nvarchar</span><span style='color:gray'>(</span>50<span
+style='color:gray'>)</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>PRIMARY</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:blue'>KEY </span><span style='color:gray'>(</span>PersonID<span
+style='color:gray'>))</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+13.5pt'><span style='font-size:10.0pt;font-family:"Segoe UI",sans-serif;
+color:#2A2A2A'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt'><b><span
+style='font-size:14.0pt;font-family:"Segoe UI",sans-serif;color:#2A2A2A'>Naming
+your key</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+13.5pt'><span style='font-size:10.0pt;font-family:"Segoe UI",sans-serif;
+color:#2A2A2A'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>Create</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:blue'>table</span> Person</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:gray'>(</span><span style='font-size:9.5pt;font-family:Consolas'>PersonID
+<span style='color:blue'>numeric</span><span style='color:gray'>(</span>18<span
+style='color:gray'>,</span>0<span style='color:gray'>),</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>FirstName
+<span style='color:blue'>nvarchar</span><span style='color:gray'>(</span>50<span
+style='color:gray'>),</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>LastName
+<span style='color:blue'>nvarchar</span><span style='color:gray'>(</span>50<span
+style='color:gray'>)</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>constraint</span><span style='font-size:9.5pt;font-family:Consolas'>
+personid_pk <span style='color:blue'>PRIMARY</span> <span style='color:blue'>KEY
+</span><span style='color:gray'>(</span>PersonID<span style='color:gray'>))</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+13.5pt'><span style='font-size:10.0pt;font-family:"Segoe UI",sans-serif;
+color:#2A2A2A'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span style='font-size:14.0pt;font-family:"Segoe UI",sans-serif;
+color:black'>&nbsp;</span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:14.0pt;font-family:"Segoe UI",sans-serif;
+color:black'>Add a foreign key</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>Create</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:blue'>table</span> <span style='color:blue'>Address</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:gray'>(</span><span style='font-size:9.5pt;font-family:Consolas'>PersonID
+<span style='color:blue'>numeric</span><span style='color:gray'>(</span>18<span
+style='color:gray'>,</span>0<span style='color:gray'>),</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>Addr1
+<span style='color:blue'>nvarchar</span><span style='color:gray'>(</span>50<span
+style='color:gray'>),</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>Addr2
+<span style='color:blue'>nvarchar</span><span style='color:gray'>(</span>50<span
+style='color:gray'>),</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>City
+<span style='color:blue'>nvarchar</span><span style='color:gray'>(</span>25<span
+style='color:gray'>),</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>State</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:blue'>nvarchar</span><span style='color:gray'>(</span>2<span
+style='color:gray'>),</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>Zip
+<span style='color:blue'>nvarchar</span><span style='color:gray'>(</span>9<span
+style='color:gray'>)</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>constraint</span><span style='font-size:9.5pt;font-family:Consolas'>
+person_personid_fk <span style='color:blue'>foreign</span> <span
+style='color:blue'>key </span><span style='color:gray'>(</span>personid<span
+style='color:gray'>)</span> <span style='color:blue'>references</span> person<span
+style='color:gray'>(</span>personid<span style='color:gray'>))</span></span></p>
+
+<p class=MsoNormal style='line-height:13.15pt'><span style='font-size:10.0pt;
+font-family:"Segoe UI",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span style='font-size:14.0pt;font-family:"Segoe UI",sans-serif;
+color:black'>Add a unique constraint</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>Create</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:blue'>table</span> <span style='color:blue'>Address</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:gray'>(</span><span style='font-size:9.5pt;font-family:Consolas'>PersonID
+<span style='color:blue'>numeric</span><span style='color:gray'>(</span>18<span
+style='color:gray'>,</span>0<span style='color:gray'>),</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>ID
+<span style='color:blue'>numeric</span><span style='color:gray'>(</span>18<span
+style='color:gray'>),</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>Addr1
+<span style='color:blue'>nvarchar</span><span style='color:gray'>(</span>50<span
+style='color:gray'>),</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>Addr2
+<span style='color:blue'>nvarchar</span><span style='color:gray'>(</span>50<span
+style='color:gray'>),</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>City
+<span style='color:blue'>nvarchar</span><span style='color:gray'>(</span>25<span
+style='color:gray'>),</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>State</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:blue'>nvarchar</span><span style='color:gray'>(</span>2<span
+style='color:gray'>),</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>Zip
+<span style='color:blue'>nvarchar</span><span style='color:gray'>(</span>9<span
+style='color:gray'>)</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>constraint</span><span style='font-size:9.5pt;font-family:Consolas'>
+person_personid_fk1 <span style='color:blue'>foreign</span> <span
+style='color:blue'>key </span><span style='color:gray'>(</span>personid<span
+style='color:gray'>)</span> <span style='color:blue'>references</span> Person<span
+style='color:gray'>(</span>personid<span style='color:gray'>)</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>constraint</span><span style='font-size:9.5pt;font-family:Consolas'>
+peronaddress_uk <span style='color:blue'>unique </span><span style='color:gray'>(</span>personid<span
+style='color:gray'>,</span>id<span style='color:gray'>))</span></span></p>
+
+<p class=MsoNormal style='line-height:13.15pt'><span style='font-size:10.0pt;
+font-family:"Segoe UI",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span style='font-size:14.0pt;font-family:"Segoe UI",sans-serif;
+color:black'>Add a check constraint</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>Create</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:blue'>table</span> Person1</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:gray'>(</span><span style='font-size:9.5pt;font-family:Consolas'>PersonID
+<span style='color:blue'>numeric</span><span style='color:gray'>(</span>18<span
+style='color:gray'>,</span>0<span style='color:gray'>),</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>FirstName
+<span style='color:blue'>nvarchar</span><span style='color:gray'>(</span>50<span
+style='color:gray'>),</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>LastName
+<span style='color:blue'>nvarchar</span><span style='color:gray'>(</span>50<span
+style='color:gray'>),</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>Age
+<span style='color:blue'>numeric</span><span style='color:gray'>(</span>3<span
+style='color:gray'>)</span> <span style='color:blue'>constraint</span>
+person_age_check <span style='color:blue'>CHECK </span><span style='color:gray'>(</span>age
+<span style='color:gray'>&gt;=</span> 0 <span style='color:gray'>and</span> age
+<span style='color:gray'>&lt;=</span> 100<span style='color:gray'>)</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>constraint</span><span style='font-size:9.5pt;font-family:Consolas'>
+personid_pk1 <span style='color:blue'>PRIMARY</span> <span style='color:blue'>KEY
+</span><span style='color:gray'>(</span>PersonID<span style='color:gray'>))</span></span></p>
+
+<p class=MsoNormal style='line-height:13.15pt'><span style='font-size:10.0pt;
+font-family:"Segoe UI",sans-serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span style='font-size:14.0pt;line-height:107%'>Learn SQL</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><b><span style='font-size:10.0pt;font-family:Consolas'>Sample
+Database Tables</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>CREATE</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:blue'>TABLE</span> DEPT</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>       </span><span style='font-size:9.5pt;font-family:Consolas;
+color:gray'>(</span><span style='font-size:9.5pt;font-family:Consolas'>DEPTNO <span
+style='color:blue'>Numeric</span><span style='color:gray'>(</span>2<span
+style='color:gray'>)</span> <span style='color:blue'>CONSTRAINT</span> PK_DEPT <span
+style='color:blue'>PRIMARY</span> <span style='color:blue'>KEY</span><span
+style='color:gray'>,</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>    
+DNAME <span style='color:blue'>NVARCHAR</span><span style='color:gray'>(</span>14<span
+style='color:gray'>)</span> <span style='color:gray'>,</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>    
+LOC <span style='color:blue'>NVARCHAR</span><span style='color:gray'>(</span>13<span
+style='color:gray'>)</span> <span style='color:gray'>)</span> <span
+style='color:gray'>;</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>CREATE</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:blue'>TABLE</span> EMP</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>       </span><span style='font-size:9.5pt;font-family:Consolas;
+color:gray'>(</span><span style='font-size:9.5pt;font-family:Consolas'>EMPNO <span
+style='color:blue'>Numeric</span><span style='color:gray'>(</span>4<span
+style='color:gray'>)</span> <span style='color:blue'>CONSTRAINT</span> PK_EMP <span
+style='color:blue'>PRIMARY</span> <span style='color:blue'>KEY</span><span
+style='color:gray'>,</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>    
+ENAME <span style='color:blue'>NVARCHAR</span><span style='color:gray'>(</span>10<span
+style='color:gray'>),</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>    
+JOB <span style='color:blue'>NVARCHAR</span><span style='color:gray'>(</span>9<span
+style='color:gray'>),</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>    
+MGR <span style='color:blue'>Numeric</span><span style='color:gray'>(</span>4<span
+style='color:gray'>),</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>    
+HIREDATE <span style='color:blue'>DATETIME</span><span style='color:gray'>,</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>    
+SAL <span style='color:blue'>Numeric</span><span style='color:gray'>(</span>7<span
+style='color:gray'>,</span>2<span style='color:gray'>),</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>    
+COMM <span style='color:blue'>Numeric</span><span style='color:gray'>(</span>7<span
+style='color:gray'>,</span>2<span style='color:gray'>),</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>    
+DEPTNO <span style='color:blue'>Numeric</span><span style='color:gray'>(</span>2<span
+style='color:gray'>)</span> <span style='color:blue'>CONSTRAINT</span>
+FK_DEPTNO <span style='color:blue'>REFERENCES</span> DEPT<span
+style='color:gray'>);</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>INSERT</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:blue'>INTO</span> DEPT <span style='color:blue'>VALUES</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>     </span><span style='font-size:9.5pt;font-family:Consolas;
+color:gray'>(</span><span style='font-size:9.5pt;font-family:Consolas'>10<span
+style='color:gray'>,</span><span style='color:red'>'ACCOUNTING'</span><span
+style='color:gray'>,</span><span style='color:red'>'NEW YORK'</span><span
+style='color:gray'>);</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>INSERT</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:blue'>INTO</span> DEPT <span style='color:blue'>VALUES </span><span
+style='color:gray'>(</span>20<span style='color:gray'>,</span><span
+style='color:red'>'RESEARCH'</span><span style='color:gray'>,</span><span
+style='color:red'>'DALLAS'</span><span style='color:gray'>);</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>INSERT</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:blue'>INTO</span> DEPT <span style='color:blue'>VALUES</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>     </span><span style='font-size:9.5pt;font-family:Consolas;
+color:gray'>(</span><span style='font-size:9.5pt;font-family:Consolas'>30<span
+style='color:gray'>,</span><span style='color:red'>'SALES'</span><span
+style='color:gray'>,</span><span style='color:red'>'CHICAGO'</span><span
+style='color:gray'>);</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>INSERT</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:blue'>INTO</span> DEPT <span style='color:blue'>VALUES</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>     </span><span style='font-size:9.5pt;font-family:Consolas;
+color:gray'>(</span><span style='font-size:9.5pt;font-family:Consolas'>40<span
+style='color:gray'>,</span><span style='color:red'>'OPERATIONS'</span><span
+style='color:gray'>,</span><span style='color:red'>'BOSTON'</span><span
+style='color:gray'>);</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>INSERT</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:blue'>INTO</span> EMP <span style='color:blue'>VALUES</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:gray'>(</span><span style='font-size:9.5pt;font-family:Consolas'>7369<span
+style='color:gray'>,</span><span style='color:red'>'SMITH'</span><span
+style='color:gray'>,</span><span style='color:red'>'CLERK'</span><span
+style='color:gray'>,</span>7902<span style='color:gray'>,</span><span
+style='color:red'>'19801217'</span><span style='color:gray'>,</span>800<span
+style='color:gray'>,NULL,</span>20<span style='color:gray'>);</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>INSERT</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:blue'>INTO</span> EMP <span style='color:blue'>VALUES</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:gray'>(</span><span style='font-size:9.5pt;font-family:Consolas'>7499<span
+style='color:gray'>,</span><span style='color:red'>'ALLEN'</span><span
+style='color:gray'>,</span><span style='color:red'>'SALESMAN'</span><span
+style='color:gray'>,</span>7698<span style='color:gray'>,</span><span
+style='color:red'>'19810220'</span><span style='color:gray'>,</span>1600<span
+style='color:gray'>,</span>300<span style='color:gray'>,</span>30<span
+style='color:gray'>);</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>INSERT</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:blue'>INTO</span> EMP <span style='color:blue'>VALUES</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:gray'>(</span><span style='font-size:9.5pt;font-family:Consolas'>7521<span
+style='color:gray'>,</span><span style='color:red'>'WARD'</span><span
+style='color:gray'>,</span><span style='color:red'>'SALESMAN'</span><span
+style='color:gray'>,</span>7698<span style='color:gray'>,</span><span
+style='color:red'>'19810222'</span><span style='color:gray'>,</span>1250<span
+style='color:gray'>,</span>500<span style='color:gray'>,</span>30<span
+style='color:gray'>);</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>INSERT</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:blue'>INTO</span> EMP <span style='color:blue'>VALUES</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:gray'>(</span><span style='font-size:9.5pt;font-family:Consolas'>7566<span
+style='color:gray'>,</span><span style='color:red'>'JONES'</span><span
+style='color:gray'>,</span><span style='color:red'>'MANAGER'</span><span
+style='color:gray'>,</span>7839<span style='color:gray'>,</span><span
+style='color:red'>'19810402'</span><span style='color:gray'>,</span>2975<span
+style='color:gray'>,NULL,</span>20<span style='color:gray'>);</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>INSERT</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:blue'>INTO</span> EMP <span style='color:blue'>VALUES</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:gray'>(</span><span style='font-size:9.5pt;font-family:Consolas'>7654<span
+style='color:gray'>,</span><span style='color:red'>'MARTIN'</span><span
+style='color:gray'>,</span><span style='color:red'>'SALESMAN'</span><span
+style='color:gray'>,</span>7698<span style='color:gray'>,</span><span
+style='color:red'>'19810928'</span><span style='color:gray'>,</span>1250<span
+style='color:gray'>,</span>1400<span style='color:gray'>,</span>30<span
+style='color:gray'>);</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>INSERT</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:blue'>INTO</span> EMP <span style='color:blue'>VALUES</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:gray'>(</span><span style='font-size:9.5pt;font-family:Consolas'>7698<span
+style='color:gray'>,</span><span style='color:red'>'BLAKE'</span><span
+style='color:gray'>,</span><span style='color:red'>'MANAGER'</span><span
+style='color:gray'>,</span>7839<span style='color:gray'>,</span><span
+style='color:red'>'19810501'</span><span style='color:gray'>,</span>2850<span
+style='color:gray'>,NULL,</span>30<span style='color:gray'>);</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>INSERT</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:blue'>INTO</span> EMP <span style='color:blue'>VALUES</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:gray'>(</span><span style='font-size:9.5pt;font-family:Consolas'>7782<span
+style='color:gray'>,</span><span style='color:red'>'CLARK'</span><span
+style='color:gray'>,</span><span style='color:red'>'MANAGER'</span><span
+style='color:gray'>,</span>7839<span style='color:gray'>,</span><span
+style='color:red'>'19810609'</span><span style='color:gray'>,</span>2450<span
+style='color:gray'>,NULL,</span>10<span style='color:gray'>);</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>INSERT</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:blue'>INTO</span> EMP <span style='color:blue'>VALUES</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:gray'>(</span><span style='font-size:9.5pt;font-family:Consolas'>7788<span
+style='color:gray'>,</span><span style='color:red'>'SCOTT'</span><span
+style='color:gray'>,</span><span style='color:red'>'ANALYST'</span><span
+style='color:gray'>,</span>7566<span style='color:gray'>,</span><span
+style='color:red'>'19870712'</span><span style='color:gray'>,</span>3000<span
+style='color:gray'>,NULL,</span>20<span style='color:gray'>);</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>INSERT</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:blue'>INTO</span> EMP <span style='color:blue'>VALUES</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:gray'>(</span><span style='font-size:9.5pt;font-family:Consolas'>7839<span
+style='color:gray'>,</span><span style='color:red'>'KING'</span><span
+style='color:gray'>,</span><span style='color:red'>'PRESIDENT'</span><span
+style='color:gray'>,NULL,</span><span style='color:red'>'19811117'</span><span
+style='color:gray'>,</span>5000<span style='color:gray'>,NULL,</span>10<span
+style='color:gray'>);</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>INSERT</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:blue'>INTO</span> EMP <span style='color:blue'>VALUES</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:gray'>(</span><span style='font-size:9.5pt;font-family:Consolas'>7844<span
+style='color:gray'>,</span><span style='color:red'>'TURNER'</span><span
+style='color:gray'>,</span><span style='color:red'>'SALESMAN'</span><span
+style='color:gray'>,</span>7698<span style='color:gray'>,</span><span
+style='color:red'>'19810908'</span><span style='color:gray'>,</span>1500<span
+style='color:gray'>,</span>0<span style='color:gray'>,</span>30<span
+style='color:gray'>);</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>INSERT</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:blue'>INTO</span> EMP <span style='color:blue'>VALUES</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:gray'>(</span><span style='font-size:9.5pt;font-family:Consolas'>7876<span
+style='color:gray'>,</span><span style='color:red'>'ADAMS'</span><span
+style='color:gray'>,</span><span style='color:red'>'CLERK'</span><span
+style='color:gray'>,</span>7788<span style='color:gray'>,</span><span
+style='color:red'>'19870113'</span><span style='color:gray'>,</span>1100<span
+style='color:gray'>,NULL,</span>20<span style='color:gray'>);</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>INSERT</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:blue'>INTO</span> EMP <span style='color:blue'>VALUES</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:gray'>(</span><span style='font-size:9.5pt;font-family:Consolas'>7900<span
+style='color:gray'>,</span><span style='color:red'>'JAMES'</span><span
+style='color:gray'>,</span><span style='color:red'>'CLERK'</span><span
+style='color:gray'>,</span>7698<span style='color:gray'>,</span><span
+style='color:red'>'19811203'</span><span style='color:gray'>,</span>950<span
+style='color:gray'>,NULL,</span>30<span style='color:gray'>);</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>INSERT</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:blue'>INTO</span> EMP <span style='color:blue'>VALUES</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:gray'>(</span><span style='font-size:9.5pt;font-family:Consolas'>7902<span
+style='color:gray'>,</span><span style='color:red'>'FORD'</span><span
+style='color:gray'>,</span><span style='color:red'>'ANALYST'</span><span
+style='color:gray'>,</span>7566<span style='color:gray'>,</span><span
+style='color:red'>'19811203'</span><span style='color:gray'>,</span>3000<span
+style='color:gray'>,NULL,</span>20<span style='color:gray'>);</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>INSERT</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:blue'>INTO</span> EMP <span style='color:blue'>VALUES</span> </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:gray'>(</span><span style='font-size:9.5pt;font-family:Consolas'>7934<span
+style='color:gray'>,</span><span style='color:red'>'MILLER'</span><span
+style='color:gray'>,</span><span style='color:red'>'CLERK'</span><span
+style='color:gray'>,</span>7782<span style='color:gray'>,</span><span
+style='color:red'>'19820123'</span><span style='color:gray'>,</span>1300<span
+style='color:gray'>,NULL,</span>10<span style='color:gray'>);</span></span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><b>Baisc SQL Select Command:</b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>SELECT</span><span style='font-size:9.5pt;font-family:Consolas'>
+column_name<span style='color:gray'>,</span>column_name</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>FROM</span><span style='font-size:9.5pt;font-family:Consolas'>
+table_name<span style='color:gray'>;</span></span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>SELECT</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:gray'>*</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>FROM</span><span style='font-size:9.5pt;font-family:Consolas'>
+table_name<span style='color:gray'>;</span></span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><b><span style='font-size:14.0pt;line-height:107%'>Comparison
+Operators:</span></b></p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width=571
+ style='width:428.0pt;margin-left:-.5pt;border-collapse:collapse'>
+ <tr style='height:17.25pt'>
+  <td width=132 valign=top style='width:99.0pt;border-top:solid #CCCCCC 1.0pt;
+  border-left:solid #CCCCCC 1.0pt;border-bottom:none;border-right:none;
+  background:white;padding:0in 5.4pt 0in 5.4pt;height:17.25pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><b><span style='font-family:"Verdana",sans-serif;color:black'>Operator</span></b></p>
+  </td>
+  <td width=439 valign=top style='width:329.0pt;border-top:solid #CCCCCC 1.0pt;
+  border-left:none;border-bottom:none;border-right:solid #CCCCCC 1.0pt;
+  background:white;padding:0in 5.4pt 0in 5.4pt;height:17.25pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><b><span style='font-family:"Verdana",sans-serif;color:black'>Description</span></b></p>
+  </td>
+ </tr>
+ <tr style='height:17.25pt'>
+  <td width=132 valign=top style='width:99.0pt;border:none;border-left:solid #CCCCCC 1.0pt;
+  background:#F1F1F1;padding:0in 5.4pt 0in 5.4pt;height:17.25pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-family:"Verdana",sans-serif;color:black'>=</span></p>
+  </td>
+  <td width=439 valign=top style='width:329.0pt;border:none;border-right:solid #CCCCCC 1.0pt;
+  background:#F1F1F1;padding:0in 5.4pt 0in 5.4pt;height:17.25pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-family:"Verdana",sans-serif;color:black'>Equal</span></p>
+  </td>
+ </tr>
+ <tr style='height:17.25pt'>
+  <td width=132 valign=top style='width:99.0pt;border:none;border-left:solid #CCCCCC 1.0pt;
+  background:white;padding:0in 5.4pt 0in 5.4pt;height:17.25pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-family:"Verdana",sans-serif;color:black'>&lt;&gt;&nbsp;</span></p>
+  </td>
+  <td width=439 valign=top style='width:329.0pt;border:none;border-right:solid #CCCCCC 1.0pt;
+  background:white;padding:0in 5.4pt 0in 5.4pt;height:17.25pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-family:"Verdana",sans-serif;color:black'>Not
+  equal.&nbsp;<b>Note:</b>&nbsp;In some versions of SQL this operator may be
+  written as !=</span></p>
+  </td>
+ </tr>
+ <tr style='height:17.25pt'>
+  <td width=132 valign=top style='width:99.0pt;border:none;border-left:solid #CCCCCC 1.0pt;
+  background:#F1F1F1;padding:0in 5.4pt 0in 5.4pt;height:17.25pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-family:"Verdana",sans-serif;color:black'>&gt;&nbsp;</span></p>
+  </td>
+  <td width=439 valign=top style='width:329.0pt;border:none;border-right:solid #CCCCCC 1.0pt;
+  background:#F1F1F1;padding:0in 5.4pt 0in 5.4pt;height:17.25pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-family:"Verdana",sans-serif;color:black'>Greater
+  than</span></p>
+  </td>
+ </tr>
+ <tr style='height:17.25pt'>
+  <td width=132 valign=top style='width:99.0pt;border:none;border-left:solid #CCCCCC 1.0pt;
+  background:white;padding:0in 5.4pt 0in 5.4pt;height:17.25pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-family:"Verdana",sans-serif;color:black'>&lt;&nbsp;</span></p>
+  </td>
+  <td width=439 valign=top style='width:329.0pt;border:none;border-right:solid #CCCCCC 1.0pt;
+  background:white;padding:0in 5.4pt 0in 5.4pt;height:17.25pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-family:"Verdana",sans-serif;color:black'>Less than</span></p>
+  </td>
+ </tr>
+ <tr style='height:17.25pt'>
+  <td width=132 valign=top style='width:99.0pt;border:none;border-left:solid #CCCCCC 1.0pt;
+  background:#F1F1F1;padding:0in 5.4pt 0in 5.4pt;height:17.25pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-family:"Verdana",sans-serif;color:black'>&gt;=</span></p>
+  </td>
+  <td width=439 valign=top style='width:329.0pt;border:none;border-right:solid #CCCCCC 1.0pt;
+  background:#F1F1F1;padding:0in 5.4pt 0in 5.4pt;height:17.25pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-family:"Verdana",sans-serif;color:black'>Greater
+  than or equal</span></p>
+  </td>
+ </tr>
+ <tr style='height:17.25pt'>
+  <td width=132 valign=top style='width:99.0pt;border:none;border-left:solid #CCCCCC 1.0pt;
+  background:white;padding:0in 5.4pt 0in 5.4pt;height:17.25pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-family:"Verdana",sans-serif;color:black'>&lt;=</span></p>
+  </td>
+  <td width=439 valign=top style='width:329.0pt;border:none;border-right:solid #CCCCCC 1.0pt;
+  background:white;padding:0in 5.4pt 0in 5.4pt;height:17.25pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-family:"Verdana",sans-serif;color:black'>Less than
+  or equal</span></p>
+  </td>
+ </tr>
+ <tr style='height:17.25pt'>
+  <td width=132 valign=top style='width:99.0pt;border:none;border-left:solid #CCCCCC 1.0pt;
+  background:#F1F1F1;padding:0in 5.4pt 0in 5.4pt;height:17.25pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-family:"Verdana",sans-serif;color:black'>BETWEEN</span></p>
+  </td>
+  <td width=439 valign=top style='width:329.0pt;border:none;border-right:solid #CCCCCC 1.0pt;
+  background:#F1F1F1;padding:0in 5.4pt 0in 5.4pt;height:17.25pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-family:"Verdana",sans-serif;color:black'>Between an
+  inclusive range</span></p>
+  </td>
+ </tr>
+ <tr style='height:17.25pt'>
+  <td width=132 valign=top style='width:99.0pt;border:none;border-left:solid #CCCCCC 1.0pt;
+  background:white;padding:0in 5.4pt 0in 5.4pt;height:17.25pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-family:"Verdana",sans-serif;color:black'>LIKE</span></p>
+  </td>
+  <td width=439 valign=top style='width:329.0pt;border:none;border-right:solid #CCCCCC 1.0pt;
+  background:white;padding:0in 5.4pt 0in 5.4pt;height:17.25pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-family:"Verdana",sans-serif;color:black'>Search for
+  a pattern</span></p>
+  </td>
+ </tr>
+ <tr style='height:17.25pt'>
+  <td width=132 valign=top style='width:99.0pt;border-top:none;border-left:
+  solid #CCCCCC 1.0pt;border-bottom:solid #CCCCCC 1.0pt;border-right:none;
+  background:#F1F1F1;padding:0in 5.4pt 0in 5.4pt;height:17.25pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-family:"Verdana",sans-serif;color:black'>IN</span></p>
+  </td>
+  <td width=439 valign=top style='width:329.0pt;border-top:none;border-left:
+  none;border-bottom:solid #CCCCCC 1.0pt;border-right:solid #CCCCCC 1.0pt;
+  background:#F1F1F1;padding:0in 5.4pt 0in 5.4pt;height:17.25pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-family:"Verdana",sans-serif;color:black'>To specify
+  multiple possible values for a column</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><b>Filter Records:</b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>SELECT</span><span style='font-size:9.5pt;font-family:Consolas'>
+column_name<span style='color:gray'>,</span>column_name</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>FROM</span><span style='font-size:9.5pt;font-family:Consolas'>
+table_name</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>WHERE</span><span style='font-size:9.5pt;font-family:Consolas'>
+column_name comparison_operator value<span style='color:gray'>;</span></span></p>
+
+<p class=MsoNormal><b>&nbsp;</b></p>
+
+<p class=MsoNormal><b>Filter Records based on multiple columns:</b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>SELECT</span><span style='font-size:9.5pt;font-family:Consolas'>
+column_name<span style='color:gray'>,</span>column_name</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>FROM</span><span style='font-size:9.5pt;font-family:Consolas'>
+table_name</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>WHERE</span><span style='font-size:9.5pt;font-family:Consolas'>
+column_name comparison_operator value<span style='color:gray'>;</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:gray'>AND</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:gray'>|</span> <span style='color:gray'>OR</span> column_name
+comparison_operator value<span style='color:gray'>;</span></span></p>
+
+<p class=MsoNormal><b><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></b></p>
+
+<p class=MsoNormal><b>Sort your result set:</b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>SELECT</span><span style='font-size:9.5pt;font-family:Consolas'>
+column_name<span style='color:gray'>,</span> column_name</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>FROM</span><span style='font-size:9.5pt;font-family:Consolas'>
+table_name</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>ORDER</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:blue'>BY</span> column_name <span style='color:blue'>ASC</span><span
+style='color:gray'>|</span><span style='color:blue'>DESC</span><span
+style='color:gray'>,</span> column_name <span style='color:blue'>ASC</span><span
+style='color:gray'>|</span><span style='color:blue'>DESC</span><span
+style='color:gray'>;</span></span></p>
+
+<p class=MsoNormal><b>Pattern Selection:</b></p>
+
+<p class=MsoNormal><span style='font-family:Consolas;color:black;background:
+white'>SELECT<span class=apple-converted-space>&nbsp;</span><em><span
+style='font-family:Consolas'>column_name(s)</span></em></span><span
+style='font-family:Consolas;color:black'><br>
+<span style='background:white'>FROM<span class=apple-converted-space>&nbsp;</span><em><span
+style='font-family:Consolas'>table_name</span></em></span><br>
+<span style='background:white'>WHERE<span class=apple-converted-space>&nbsp;</span><em><span
+style='font-family:Consolas'>column_name</span></em><span
+class=apple-converted-space>&nbsp;</span>LIKE<span class=apple-converted-space>&nbsp;</span><em><span
+style='font-family:Consolas'>pattern</span></em>;</span></span></p>
+
+<p class=MsoNormal><span style='font-family:Consolas;color:black;background:
+white'>&nbsp;</span></p>
+
+<p class=MsoNormal><b>Range Selection:</b></p>
+
+<p class=MsoNormal><span style='font-family:Consolas;color:black;background:
+white'>SELECT<span class=apple-converted-space>&nbsp;</span><em><span
+style='font-family:Consolas'>column_name(s)</span></em></span><span
+style='font-family:Consolas;color:black'><br>
+<span style='background:white'>FROM<span class=apple-converted-space>&nbsp;</span><em><span
+style='font-family:Consolas'>table_name</span></em></span><br>
+<span style='background:white'>WHERE<span class=apple-converted-space>&nbsp;</span><em><span
+style='font-family:Consolas'>column_name</span></em><span
+class=apple-converted-space><i>&nbsp;</i></span>BETWEEN<span
+class=apple-converted-space>&nbsp;</span><em><span style='font-family:Consolas'>value1</span></em><span
+class=apple-converted-space>&nbsp;</span>AND<span class=apple-converted-space>&nbsp;</span><em><span
+style='font-family:Consolas'>value2;</span></em></span></span></p>
+
+<p class=MsoNormal><em><span style='font-family:Consolas;color:black;
+background:white'>&nbsp;</span></em></p>
+
+<p class=MsoNormal><b>Multiple Value Selection:</b></p>
+
+<p class=MsoNormal><span style='font-family:Consolas;color:black;background:
+white'>SELECT<span class=apple-converted-space>&nbsp;</span><em><span
+style='font-family:Consolas'>column_name(s)</span></em></span><span
+style='font-family:Consolas;color:black'><br>
+<span style='background:white'>FROM<span class=apple-converted-space>&nbsp;</span><em><span
+style='font-family:Consolas'>table_name</span></em></span><br>
+<span style='background:white'>WHERE<span class=apple-converted-space>&nbsp;</span><em><span
+style='font-family:Consolas'>column_name</span></em><span
+class=apple-converted-space>&nbsp;</span>IN (<em><span style='font-family:Consolas'>value1</span></em>,<em><span
+style='font-family:Consolas'>value2</span></em>,...);</span></span></p>
+
+<p class=MsoNormal><b>&nbsp;</b></p>
+
+<p class=MsoNormal><b><span style='font-size:14.0pt;line-height:107%'>Additional
+Topics:</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+13.5pt'><span style='font-size:10.0pt;font-family:"Segoe UI",sans-serif;
+color:#2A2A2A'>Decode how standard document describes table creation command:</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+13.5pt'><span style='font-size:10.0pt;font-family:"Segoe UI",sans-serif;
+color:#2A2A2A'>https://msdn.microsoft.com/en-us/library/ms174979.aspx</span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>What happens when you issue a interact with database:</p>
+
+<p class=MsoNormal><img width=624 height=350 id="Picture 1"
+src="day2_files/image002.jpg"
+alt="http://rusanu.com/wp-content/uploads/2013/07/execution-pipeline.png"></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+</div>
+
+</body>
+
+</html>
