@@ -16,11 +16,11 @@
 	{font-family:"Segoe UI";
 	panose-1:2 11 5 2 4 2 4 2 2 3;}
 @font-face
-	{font-family:Verdana;
-	panose-1:2 11 6 4 3 5 4 4 2 4;}
-@font-face
 	{font-family:Consolas;
 	panose-1:2 11 6 9 2 2 4 3 2 4;}
+@font-face
+	{font-family:Verdana;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
  /* Style Definitions */
  p.MsoNormal, li.MsoNormal, div.MsoNormal
 	{margin-top:0in;
@@ -1835,6 +1835,23 @@ normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
 color:blue'>&nbsp;</span></p>
 
 <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>Create
+DEPT and EMP table in dbtest database.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>DEPT
+table has one primary key which prevents from users creating a department with
+same DEPTNO value.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
 normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
 color:blue'>CREATE</span><span style='font-size:9.5pt;font-family:Consolas'> <span
 style='color:blue'>TABLE</span> DEPT</span></p>
@@ -1843,7 +1860,7 @@ style='color:blue'>TABLE</span> DEPT</span></p>
 normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
 color:gray'>(</span><span style='font-size:9.5pt;font-family:Consolas'>DEPTNO <span
 style='color:blue'>Numeric</span><span style='color:gray'>(</span>2<span
-style='color:gray'>)</span> <span style='color:blue'>CONSTRAINT</span> PK_DEPT <span
+style='color:gray'>)</span> <span style='color:blue'>CONSTRAINT</span> DEPT_PK <span
 style='color:blue'>PRIMARY</span> <span style='color:blue'>KEY</span><span
 style='color:gray'>,</span></span></p>
 
@@ -1864,6 +1881,21 @@ color:blue'>&nbsp;</span></p>
 
 <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
 normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>EMP
+table has it’s own primary key to prevent using same employee number again. It
+also has a foreign key to DEPT table so when an employee is created, it can be assigned
+to a department which already exists. It would not make sense to hire an
+employee and not assign him a department as he would not know what his daily
+work duties will be.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
 color:blue'>CREATE</span><span style='font-size:9.5pt;font-family:Consolas'> <span
 style='color:blue'>TABLE</span> EMP</span></p>
 
@@ -1871,7 +1903,7 @@ style='color:blue'>TABLE</span> EMP</span></p>
 normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
 color:gray'>(</span><span style='font-size:9.5pt;font-family:Consolas'>EMPNO <span
 style='color:blue'>Numeric</span><span style='color:gray'>(</span>4<span
-style='color:gray'>)</span> <span style='color:blue'>CONSTRAINT</span> PK_EMP <span
+style='color:gray'>)</span> <span style='color:blue'>CONSTRAINT</span> EMP_PK <span
 style='color:blue'>PRIMARY</span> <span style='color:blue'>KEY</span><span
 style='color:gray'>,</span></span></p>
 
@@ -1907,9 +1939,16 @@ style='color:gray'>,</span>2<span style='color:gray'>),</span></span></p>
 <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
 normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>DEPTNO
 <span style='color:blue'>Numeric</span><span style='color:gray'>(</span>2<span
-style='color:gray'>)</span> <span style='color:blue'>CONSTRAINT</span>
-FK_DEPTNO <span style='color:blue'>REFERENCES</span> DEPT<span
-style='color:gray'>);</span></span></p>
+style='color:gray'>)</span> <span style='color:blue'>CONSTRAINT</span> DEPTNO_FK
+<span style='color:blue'>REFERENCES</span> DEPT(DEPTNO)<span style='color:gray'>);</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>Let’s
+create data/rows in the department table.</span></p>
 
 <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
 normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
@@ -1946,6 +1985,50 @@ style='color:blue'>INTO</span> DEPT <span style='color:blue'>VALUES </span><span
 style='color:gray'>(</span>40<span style='color:gray'>,</span><span
 style='color:red'>'OPERATIONS'</span><span style='color:gray'>,</span><span
 style='color:red'>'BOSTON'</span><span style='color:gray'>);</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>Let’s
+verify that we created 4 departments so we can start a company and hire some
+employees.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>select</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:gray'>*</span> <span style='color:blue'>from</span> dept<span
+style='color:gray'>;</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><img width=257 height=92 id="Picture 2"
+src="day2_files/image002.png"></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>Let’s
+hire some employees by creating data/rows in employee table we can start
+generating revenue.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>&nbsp;</span></p>
 
 <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
 normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
@@ -2149,7 +2232,44 @@ style='color:gray'>,NULL,</span>10<span style='color:gray'>);</span></span></p>
 
 <p class=MsoNormal>&nbsp;</p>
 
+<p class=MsoNormal>Let’s verify that all employees were hired by querying employee
+table.</p>
+
+<p class=MsoNormal><img width=580 height=286 id="Picture 3"
+src="day2_files/image003.png"></p>
+
 <p class=MsoNormal><b>Baisc SQL Select Command:</b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>We
+are very familiar with this SELECT command now. It select all the columns,*
+denotes all the columns, available in the give table.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>SELECT</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:gray'>*</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>FROM</span><span style='font-size:9.5pt;font-family:Consolas'>
+table_name<span style='color:gray'>;</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>Example:<span
+style='color:blue'> select * from dept;</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>There is a way to select particular columns that we want to know
+what is stored in them.</span></p>
 
 <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
 normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
@@ -2161,17 +2281,30 @@ normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
 color:blue'>FROM</span><span style='font-size:9.5pt;font-family:Consolas'>
 table_name<span style='color:gray'>;</span></span></p>
 
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'>Example: </p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>select</span><span style='font-size:9.5pt;font-family:Consolas'>
+deptno<span style='color:gray'>,</span> dname <span style='color:blue'>from</span>
+dept<span style='color:gray'>;</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><img width=172 height=97 id="Picture 5"
+src="day2_files/image004.png"></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>select</span><span style='font-size:9.5pt;font-family:Consolas'>
+ename<span style='color:gray'>,</span>job<span style='color:gray'>,</span>
+hiredate <span style='color:blue'>from</span> emp<span style='color:gray'>;</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><img width=301 height=286 id="Picture 6"
+src="day2_files/image005.png"></p>
+
 <p class=MsoNormal>&nbsp;</p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
-color:blue'>SELECT</span><span style='font-size:9.5pt;font-family:Consolas'> <span
-style='color:gray'>*</span></span></p>
-
-<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
-color:blue'>FROM</span><span style='font-size:9.5pt;font-family:Consolas'>
-table_name<span style='color:gray'>;</span></span></p>
 
 <p class=MsoNormal>&nbsp;</p>
 
@@ -2316,7 +2449,16 @@ Operators:</span></b></p>
 
 <p class=MsoNormal>&nbsp;</p>
 
-<p class=MsoNormal><b>Filter Records:</b></p>
+<p class=MsoNormal><b>Filter Records (refer to above comparison operator to
+filter records):</b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>Below
+is general command to add a filter. <span style='color:#00B0F0'>WHERE</span>
+clause defines that we want to add filter critera. column_name defines which
+column we want to filter records based on. comparison_operator is one of the
+equality operator from above table. value is what values we are comparing to,
+what is stored, in that column.</span></p>
 
 <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
 normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
@@ -2330,8 +2472,12 @@ table_name</span></p>
 
 <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
 normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
-color:blue'>WHERE</span><span style='font-size:9.5pt;font-family:Consolas'>
-column_name comparison_operator value<span style='color:gray'>;</span></span></p>
+color:blue'>WHERE</span><span style='font-size:9.5pt;font-family:Consolas'> column_name
+comparison_operator value<span style='color:gray'>;</span></span></p>
+
+<p class=MsoNormal>Example:  Let’s find out who works in department 20</p>
+
+<p class=MsoNormal>Let’s find out who is sales person.</p>
 
 <p class=MsoNormal><b>&nbsp;</b></p>
 
@@ -2380,6 +2526,8 @@ style='color:gray'>|</span><span style='color:blue'>DESC</span><span
 style='color:gray'>,</span> column_name <span style='color:blue'>ASC</span><span
 style='color:gray'>|</span><span style='color:blue'>DESC</span><span
 style='color:gray'>;</span></span></p>
+
+<p class=MsoNormal><b>&nbsp;</b></p>
 
 <p class=MsoNormal><b>Pattern Selection:</b></p>
 
@@ -2448,7 +2596,7 @@ color:#2A2A2A'>https://msdn.microsoft.com/en-us/library/ms174979.aspx</span></p>
 <p class=MsoNormal>What happens when you issue a interact with database:</p>
 
 <p class=MsoNormal><img width=624 height=350 id="Picture 1"
-src="day2_files/image002.jpg"
+src="day2_files/image006.jpg"
 alt="http://rusanu.com/wp-content/uploads/2013/07/execution-pipeline.png"></p>
 
 <p class=MsoNormal>&nbsp;</p>
