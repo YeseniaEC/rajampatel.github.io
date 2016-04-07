@@ -2242,7 +2242,7 @@ src="day2_files/image003.png"></p>
 
 <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
 normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>We
-are very familiar with this SELECT command now. It select all the columns,*
+are very familiar with this SELECT command now. It selects all the columns,*
 denotes all the columns, available in the give table.</span></p>
 
 <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
@@ -2263,13 +2263,17 @@ normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>E
 style='color:blue'> select * from dept;</span></span></p>
 
 <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><img width=257 height=92 id="Picture 11"
+src="day2_files/image002.png"></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
 normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
 color:blue'>&nbsp;</span></p>
 
 <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
-color:blue'>There is a way to select particular columns that we want to know
-what is stored in them.</span></p>
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>There
+is a way to select particular columns that we want to know what is stored in
+them.</span></p>
 
 <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
 normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
@@ -2282,6 +2286,9 @@ color:blue'>FROM</span><span style='font-size:9.5pt;font-family:Consolas'>
 table_name<span style='color:gray'>;</span></span></p>
 
 <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
 normal;text-autospace:none'>Example: </p>
 
 <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
@@ -2291,14 +2298,26 @@ deptno<span style='color:gray'>,</span> dname <span style='color:blue'>from</spa
 dept<span style='color:gray'>;</span></span></p>
 
 <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:gray'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
 normal;text-autospace:none'><img width=172 height=97 id="Picture 5"
 src="day2_files/image004.png"></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>&nbsp;</span></p>
 
 <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
 normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
 color:blue'>select</span><span style='font-size:9.5pt;font-family:Consolas'>
 ename<span style='color:gray'>,</span>job<span style='color:gray'>,</span>
 hiredate <span style='color:blue'>from</span> emp<span style='color:gray'>;</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:gray'>&nbsp;</span></p>
 
 <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
 normal;text-autospace:none'><img width=301 height=286 id="Picture 6"
@@ -2475,6 +2494,8 @@ normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
 color:blue'>WHERE</span><span style='font-size:9.5pt;font-family:Consolas'> column_name
 comparison_operator value<span style='color:gray'>;</span></span></p>
 
+<p class=MsoNormal>&nbsp;</p>
+
 <p class=MsoNormal>Example:  Let’s find out who works in department 20 by using
 equal(=) operator</p>
 
@@ -2482,7 +2503,7 @@ equal(=) operator</p>
 normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
 color:blue'>select</span><span style='font-size:9.5pt;font-family:Consolas'> <span
 style='color:gray'>*</span> <span style='color:blue'>from</span> emp <span
-style='color:blue'>where</span> deptno <span style='color:gray'>=</span> 20</span></p>
+style='color:blue'>where</span> deptno <span style='color:gray'>=</span> 20;</span></p>
 
 <p class=MsoNormal><img width=554 height=119 id="Picture 9"
 src="day2_files/image006.png"></p>
@@ -2495,13 +2516,13 @@ normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
 color:blue'>select</span><span style='font-size:9.5pt;font-family:Consolas'> <span
 style='color:gray'>*</span> <span style='color:blue'>from</span> emp <span
 style='color:blue'>where</span> job <span style='color:gray'>=</span> <span
-style='color:red'>'SALESMAN'</span></span></p>
+style='color:red'>'SALESMAN';</span></span></p>
 
 <p class=MsoNormal><img width=573 height=97 id="Picture 8"
 src="day2_files/image007.png"></p>
 
-<p class=MsoNormal><b>Let’s find out who is sales person (=) and has salary more
-(&gt;) than 1500</b></p>
+<p class=MsoNormal>Let’s find out who is sales person (=) and has salary more (&gt;)
+than 1500. We are adding more filters with ‘and’ operator.</p>
 
 <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
 normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
@@ -2509,14 +2530,34 @@ color:blue'>select</span><span style='font-size:9.5pt;font-family:Consolas'> <sp
 style='color:gray'>*</span> <span style='color:blue'>from</span> emp <span
 style='color:blue'>where</span> job <span style='color:gray'>=</span> <span
 style='color:red'>'SALESMAN'</span> <span style='color:gray'>and</span> sal <span
-style='color:gray'>&gt;</span> 1500</span></p>
+style='color:gray'>&gt;</span> 1500;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>&nbsp;</span></p>
 
 <p class=MsoNormal><img width=556 height=43 id="Picture 10"
 src="day2_files/image008.png"></p>
 
-<p class=MsoNormal><b>&nbsp;</b></p>
+<p class=MsoNormal>Let’s find out who is sales person or has salary more than
+1500. We are adding ‘or’ operator. This will show all the employees who are
+either sales person or anybody who has salary more than 1500. Look at the query
+results. Sales person does not have to have salary greater than 1500 but who is
+not sales person has to have salary greater than 1500.</p>
 
-<p class=MsoNormal><b>Filter Records based on multiple columns:</b></p>
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>select</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:gray'>*</span> <span style='color:blue'>from</span> emp <span
+style='color:blue'>where</span> job <span style='color:gray'>=</span> <span
+style='color:red'>'SALESMAN'</span> <span style='color:gray'>or</span> sal <span
+style='color:gray'>&gt;</span> 1500;</span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><img width=581 height=210 id="Picture 12"
+src="day2_files/image009.png"></p>
+
+<p class=MsoNormal><b>Filter Records based on multiple columns syntax:</b></p>
 
 <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
 normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
@@ -2531,7 +2572,7 @@ table_name</span></p>
 <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
 normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
 color:blue'>WHERE</span><span style='font-size:9.5pt;font-family:Consolas'>
-column_name comparison_operator value<span style='color:gray'>;</span></span></p>
+column_name comparison_operator value</span></p>
 
 <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
 normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
@@ -2631,7 +2672,7 @@ color:#2A2A2A'>https://msdn.microsoft.com/en-us/library/ms174979.aspx</span></p>
 <p class=MsoNormal>What happens when you issue a interact with database:</p>
 
 <p class=MsoNormal><img width=624 height=350 id="Picture 1"
-src="day2_files/image009.jpg"
+src="day2_files/image010.jpg"
 alt="http://rusanu.com/wp-content/uploads/2013/07/execution-pipeline.png"></p>
 
 <p class=MsoNormal>&nbsp;</p>
