@@ -2475,9 +2475,20 @@ normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
 color:blue'>WHERE</span><span style='font-size:9.5pt;font-family:Consolas'> column_name
 comparison_operator value<span style='color:gray'>;</span></span></p>
 
-<p class=MsoNormal>Example:  Let’s find out who works in department 20</p>
+<p class=MsoNormal>Example:  Let’s find out who works in department 20 by using
+equal(=) operator</p>
 
-<p class=MsoNormal>Let’s find out who is sales person.</p>
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>select</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:gray'>*</span> <span style='color:blue'>from</span> emp <span
+style='color:blue'>where</span> deptno <span style='color:gray'>=</span> 20</span></p>
+
+<p class=MsoNormal><img width=554 height=119 id="Picture 9"
+src="day2_files/image006.png"></p>
+
+<p class=MsoNormal>Let’s find out who is sales person by using equal(=)
+operator.</p>
 
 <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
 normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
@@ -2485,6 +2496,23 @@ color:blue'>select</span><span style='font-size:9.5pt;font-family:Consolas'> <sp
 style='color:gray'>*</span> <span style='color:blue'>from</span> emp <span
 style='color:blue'>where</span> job <span style='color:gray'>=</span> <span
 style='color:red'>'SALESMAN'</span></span></p>
+
+<p class=MsoNormal><img width=573 height=97 id="Picture 8"
+src="day2_files/image007.png"></p>
+
+<p class=MsoNormal><b>Let’s find out who is sales person (=) and has salary more
+(&gt;) than 1500</b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>select</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:gray'>*</span> <span style='color:blue'>from</span> emp <span
+style='color:blue'>where</span> job <span style='color:gray'>=</span> <span
+style='color:red'>'SALESMAN'</span> <span style='color:gray'>and</span> sal <span
+style='color:gray'>&gt;</span> 1500</span></p>
+
+<p class=MsoNormal><img width=556 height=43 id="Picture 10"
+src="day2_files/image008.png"></p>
 
 <p class=MsoNormal><b>&nbsp;</b></p>
 
@@ -2603,7 +2631,7 @@ color:#2A2A2A'>https://msdn.microsoft.com/en-us/library/ms174979.aspx</span></p>
 <p class=MsoNormal>What happens when you issue a interact with database:</p>
 
 <p class=MsoNormal><img width=624 height=350 id="Picture 1"
-src="day2_files/image006.jpg"
+src="day2_files/image009.jpg"
 alt="http://rusanu.com/wp-content/uploads/2013/07/execution-pipeline.png"></p>
 
 <p class=MsoNormal>&nbsp;</p>
