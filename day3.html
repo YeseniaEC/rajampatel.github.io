@@ -16,8 +16,11 @@
 	{font-family:Calibri;
 	panose-1:2 15 5 2 2 2 4 3 2 4;}
 @font-face
-	{font-family:Verdana;
-	panose-1:2 11 6 4 3 5 4 4 2 4;}
+	{font-family:"Segoe UI";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+@font-face
+	{font-family:Consolas;
+	panose-1:2 11 6 9 2 2 4 3 2 4;}
  /* Style Definitions */
  p.MsoNormal, li.MsoNormal, div.MsoNormal
 	{margin-top:0in;
@@ -27,6 +30,35 @@
 	line-height:107%;
 	font-size:11.0pt;
 	font-family:"Calibri",sans-serif;}
+h1
+	{mso-style-link:"Heading 1 Char";
+	margin-right:0in;
+	margin-left:0in;
+	font-size:24.0pt;
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+p
+	{margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+pre
+	{mso-style-link:"HTML Preformatted Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Courier New";}
+span.apple-converted-space
+	{mso-style-name:apple-converted-space;}
+span.Heading1Char
+	{mso-style-name:"Heading 1 Char";
+	mso-style-link:"Heading 1";
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+span.HTMLPreformattedChar
+	{mso-style-name:"HTML Preformatted Char";
+	mso-style-link:"HTML Preformatted";
+	font-family:"Courier New";}
 .MsoChpDefault
 	{font-family:"Calibri",sans-serif;}
 .MsoPapDefault
@@ -51,75 +83,410 @@ ul
 
 <div class=WordSection1>
 
-<p class=MsoNormal>Day 3 Lesson Summary:</p>
+<p class=MsoNormal><b><span style='font-size:14.0pt;line-height:107%'>Day 3 Lesson
+Summary:</span></b></p>
 
-<p class=MsoNormal>Data Types</p>
+<p class=MsoNormal><b><span style='font-size:12.0pt;line-height:107%'>Data
+Types</span></b></p>
 
-<p class=MsoNormal>SQL Joins</p>
+<p class=MsoNormal>We will refer to the <b><span style='font-size:12.0pt;
+line-height:107%'>SQL Server Data Types</span></b> in the Day2 course. We will
+cover most frequently used data types. </p>
 
-<p class=MsoNormal>Copy data from table to table</p>
+<p class=MsoNormal><b><span style='font-size:12.0pt;line-height:107%'>Basics of
+Data Type</span></b></p>
 
-<p class=MsoNormal>What is transaction?</p>
+<p class=MsoNormal>As we know, we use database to store different kinds of
+information. We distinguish each information type into a smaller entities like
+customers, orders, items etc. When storing details about each entity, we need
+to define fields on basis of what information we want to collect about each
+entity like first name, last name, date of birth etc. From our knowledge of
+entity, we can create table with defined fields. Each field is container and
+should constraint/define what kind of value it should allow to store. For
+example, first name should be alphanumeric, data of birth should be date,
+account# should be numeric etc. Alphanumeric, date and numeric are data types. What
+data type to use for a particular column is part of requirements gathering.</p>
+
+<p class=MsoNormal>Most widely used data types are Int, Bit, Decimal, Numeric,
+Datetime, Date, NVarchar and Image.</p>
+
+<p class=MsoNormal><b><span style='font-size:12.0pt;line-height:107%'>SQL Joins</span></b></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>We already
+learnt about AND|OR clause in where clause to add more columns to filter data.</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>We will
+learn SQL Server terminology on writing joins.</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>So far we
+know how we can use joins when using more than one table in our FROM clause. This
+called INNER JOIN. Example:</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>select</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:gray'>*</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>from</span><span style='font-size:9.5pt;font-family:Consolas'> dept
+d<span style='color:gray'>,</span> emp e</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>where</span><span style='font-size:9.5pt;font-family:Consolas'> d<span
+style='color:gray'>.</span>DEPTNO <span style='color:gray'>=</span> e<span
+style='color:gray'>.</span>DEPTNO</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>SQL Server
+specific:</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>select</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:gray'>*</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>from</span><span style='font-size:9.5pt;font-family:Consolas'> dept
+d</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:gray'>join</span><span style='font-size:9.5pt;font-family:Consolas'> emp
+e <span style='color:blue'>on</span> d<span style='color:gray'>.</span>DEPTNO <span
+style='color:gray'>=</span> e<span style='color:gray'>.</span>DEPTNO</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>Let’s insert
+a new department in the DEPT table.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>insert</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:blue'>into</span> dept <span style='color:blue'>values </span><span
+style='color:gray'>(</span> 50<span style='color:gray'>,</span><span
+style='color:red'>'TEST DEPT'</span><span style='color:gray'>,</span><span
+style='color:red'>'FRESNO'</span><span style='color:gray'>);</span></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>IF you run
+above query, you should see </span></p>
+
+<p class=MsoNormal><img width=624 height=223 id="Picture 1"
+src="day3_files/image001.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>Where is our
+department 50?</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>When we want
+all the rows from left side table when there are 1 or no rows in the right side
+table, we have to use LEFT JOIN. Exampel:</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>select</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:gray'>*</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>from</span><span style='font-size:9.5pt;font-family:Consolas'> dept
+d</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:gray'>left</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:gray'>join</span> emp e <span style='color:blue'>on</span> d<span
+style='color:gray'>.</span>DEPTNO <span style='color:gray'>=</span> e<span
+style='color:gray'>.</span>DEPTNO</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>Below is the
+result of the LEFT JOIN which shows that now we can see deptno 50 but since
+there is no emp data, we see NULL values present.</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img width=624 height=250 id="Picture 2"
+src="day3_files/image002.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>Now let’s
+modify address table in our dbtest. Make the PersonID nullable and insert
+following rows:</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>insert</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:blue'>into</span> <span style='color:blue'>address</span> <span
+style='color:blue'>values </span><span style='color:gray'>(null,</span>1<span
+style='color:gray'>,</span><span style='color:red'>'abc '</span><span
+style='color:gray'>,</span> <span style='color:red'>'test addr2'</span><span
+style='color:gray'>,</span><span style='color:red'>'FRESNO'</span><span
+style='color:gray'>,</span><span style='color:red'>'CA'</span><span
+style='color:gray'>,</span><span style='color:red'>'93723'</span><span
+style='color:gray'>);</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>insert</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:blue'>into</span> <span style='color:blue'>address</span> <span
+style='color:blue'>values </span><span style='color:gray'>(</span>1<span
+style='color:gray'>,</span>2<span style='color:gray'>,</span><span
+style='color:red'>'def'</span><span style='color:gray'>,</span> <span
+style='color:red'>'test addr2'</span><span style='color:gray'>,</span><span
+style='color:red'>'FRESNO'</span><span style='color:gray'>,</span><span
+style='color:red'>'CA'</span><span style='color:gray'>,</span><span
+style='color:red'>'93723'</span><span style='color:gray'>);</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>insert</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:blue'>into</span> <span style='color:blue'>address</span> <span
+style='color:blue'>values </span><span style='color:gray'>(null,</span>3<span
+style='color:gray'>,</span><span style='color:red'>'ghi'</span><span
+style='color:gray'>,</span> <span style='color:red'>'test addr2'</span><span
+style='color:gray'>,</span><span style='color:red'>'FRESNO'</span><span
+style='color:gray'>,</span><span style='color:red'>'CA'</span><span
+style='color:gray'>,</span><span style='color:red'>'93723'</span><span
+style='color:gray'>);</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>Let’s
+run our query with join.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>select</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:gray'>*</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>from</span><span style='font-size:9.5pt;font-family:Consolas'>
+person p</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:gray'>join</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:blue'>address</span> a <span style='color:blue'>on</span> p<span
+style='color:gray'>.</span>PersonID <span style='color:gray'>=</span> a<span
+style='color:gray'>.</span>PersonID</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>You
+should see one row matching in both the tables.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><img width=589 height=45 id="Picture 3"
+src="day3_files/image003.png"></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>To
+get all the rows from address table and show any person who has address, we
+need to use RIGHT JOIN like below.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>select</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:gray'>*</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>from</span><span style='font-size:9.5pt;font-family:Consolas'>
+person p</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:gray'>right</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:gray'>join</span> <span style='color:blue'>address</span> a <span
+style='color:blue'>on</span> p<span style='color:gray'>.</span>PersonID <span
+style='color:gray'>=</span> a<span style='color:gray'>.</span>PersonID</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span style='font-size:12.0pt;line-height:107%'>Copy data
+from table to table</span></b></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>You can
+select data into a new table by using below syntax. This will create a new
+table based on columns you have selected.</span></p>
+
+<p class=MsoNormal><span style='font-family:Consolas;color:black;background:
+white'>SELECT *</span><span style='font-family:Consolas;color:black'><br>
+<span style='background:white'>INTO<span class=apple-converted-space>&nbsp;</span><em><span
+style='font-family:Consolas'>newtable</span></em><span
+class=apple-converted-space>&nbsp;</span>[IN<span class=apple-converted-space>&nbsp;</span><em><span
+style='font-family:Consolas'>externaldb</span></em>]</span><br>
+<span style='background:white'>FROM<span class=apple-converted-space>&nbsp;</span><em><span
+style='font-family:Consolas'>table1;</span></em></span></span></p>
+
+<p class=MsoNormal><span style='font-family:Consolas;color:black;background:
+white'>SELECT<span class=apple-converted-space>&nbsp;</span><em><span
+style='font-family:Consolas'>column_name(s)</span></em></span><span
+style='font-family:Consolas;color:black'><br>
+<span style='background:white'>INTO<span class=apple-converted-space>&nbsp;</span><em><span
+style='font-family:Consolas'>newtable</span></em><span
+class=apple-converted-space>&nbsp;</span></span></span></p>
+
+<p class=MsoNormal><span style='font-family:Consolas;color:black;background:
+white'>FROM<span class=apple-converted-space>&nbsp;</span><em><span
+style='font-family:Consolas'>table1;</span></em></span></p>
+
+<p class=MsoNormal><em><span style='font-family:Consolas;color:black;
+background:white'>&nbsp;</span></em></p>
+
+<p class=MsoNormal><em><span style='font-family:Consolas;color:black;
+background:white;font-style:normal'>You can add where clause like</span></em></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>select</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:gray'>*</span> <span style='color:blue'>into</span> dept_backup <span
+style='color:blue'>from</span> dept <span style='color:blue'>where</span>
+deptno <span style='color:gray'>=</span> 20<span style='color:gray'>;</span></span></p>
+
+<p class=MsoNormal><i><span style='font-size:12.0pt;line-height:107%'>&nbsp;</span></i></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>If you have
+existing table that you want data to be copied to:</span></p>
+
+<p class=MsoNormal><span style='font-family:Consolas;color:black;background:
+white'>INSERT INTO<span class=apple-converted-space>&nbsp;</span><em><span
+style='font-family:Consolas'>table2</span></em></span><span style='font-family:
+Consolas;color:black'><br>
+<span style='background:white'>SELECT * FROM<span class=apple-converted-space>&nbsp;</span><em><span
+style='font-family:Consolas'>table1;</span></em></span></span></p>
+
+<p class=MsoNormal><em><span style='font-family:Consolas;color:black;
+background:white'>&nbsp;</span></em></p>
+
+<p class=MsoNormal><span style='font-family:Consolas;color:black;background:
+white'>INSERT INTO<span class=apple-converted-space>&nbsp;</span><em><span
+style='font-family:Consolas'>table2</span></em></span><span style='font-family:
+Consolas;color:black'><br>
+<em><span style='font-family:Consolas;background:white'>(column_name(s))</span></em><br>
+<span style='background:white'>SELECT<span class=apple-converted-space>&nbsp;</span><em><span
+style='font-family:Consolas'>column_name(s)</span></em></span><br>
+<span style='background:white'>FROM<span class=apple-converted-space>&nbsp;</span><em><span
+style='font-family:Consolas'>table1;</span></em></span></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span style='font-size:12.0pt;line-height:107%'>What is
+transaction?</span></b></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>When you
+select, insert, update or delete data, SQL server provides Automicity,
+Consistency, Isolation and Durability.</span></p>
+
+<p style='margin-top:0in;margin-right:0in;margin-bottom:.25in;margin-left:0in;
+text-align:justify;line-height:18.0pt;background:white'><strong><span
+style='font-size:10.5pt;font-family:"Arial",sans-serif;color:#444444'>Atomicity</span></strong><span
+class=apple-converted-space><span style='font-size:10.5pt;font-family:"Arial",sans-serif;
+color:#444444'>&nbsp;</span></span><span style='font-size:10.5pt;font-family:
+"Arial",sans-serif;color:#444444'>is an all-or-none proposition.</span></p>
+
+<p style='margin-top:0in;margin-right:0in;margin-bottom:.25in;margin-left:0in;
+text-align:justify;line-height:18.0pt;background:white'><strong><span
+style='font-size:10.5pt;font-family:"Arial",sans-serif;color:#444444'>Consistency</span></strong><span
+class=apple-converted-space><span style='font-size:10.5pt;font-family:"Arial",sans-serif;
+color:#444444'>&nbsp;</span></span><span style='font-size:10.5pt;font-family:
+"Arial",sans-serif;color:#444444'>guarantees that a transaction never leaves
+your database in a half-finished state. This is also applied during queries.</span></p>
+
+<p style='margin-top:0in;margin-right:0in;margin-bottom:.25in;margin-left:0in;
+text-align:justify;line-height:18.0pt;background:white'><strong><span
+style='font-size:10.5pt;font-family:"Arial",sans-serif;color:#444444'>Isolation</span></strong><span
+class=apple-converted-space><span style='font-size:10.5pt;font-family:"Arial",sans-serif;
+color:#444444'>&nbsp;</span></span><span style='font-size:10.5pt;font-family:
+"Arial",sans-serif;color:#444444'>keeps transactions separated from each other
+until they’re finished.</span></p>
+
+<p style='margin-top:0in;margin-right:0in;margin-bottom:.25in;margin-left:0in;
+text-align:justify;line-height:18.0pt;background:white'><strong><span
+style='font-size:10.5pt;font-family:"Arial",sans-serif;color:#444444'>Durability</span></strong><span
+class=apple-converted-space><span style='font-size:10.5pt;font-family:"Arial",sans-serif;
+color:#444444'>&nbsp;</span></span><span style='font-size:10.5pt;font-family:
+"Arial",sans-serif;color:#444444'>guarantees that the database will keep track
+of pending changes in such a way that the server can recover from an abnormal
+termination.</span></p>
 
 <p class=MsoNormal>Transaction management</p>
 
-<p class=MsoNormal>Update data</p>
+<p class=MsoNormal>Below is the example of how to manage your transaction. We
+will discuss in detail.</p>
 
-<p class=MsoNormal>Delete data</p>
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>begin</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:blue'>transaction</span></span></p>
 
-<p class=MsoNormal>Aggregate SQL Functions</p>
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>select</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:gray'>*</span> <span style='color:blue'>from</span> dept<span
+style='color:gray'>;</span></span></p>
 
-<ul type=disc>
- <li class=MsoNormal style='color:black;line-height:16.9pt;background:white'><span
-     style='font-size:11.5pt;font-family:"Verdana",sans-serif'>AVG() - Returns
-     the average value</span></li>
- <li class=MsoNormal style='color:black;line-height:16.9pt;background:white'><span
-     style='font-size:11.5pt;font-family:"Verdana",sans-serif'>COUNT() -
-     Returns the number of rows</span></li>
- <li class=MsoNormal style='color:black;line-height:16.9pt;background:white'><span
-     style='font-size:11.5pt;font-family:"Verdana",sans-serif'>FIRST() -
-     Returns the first value</span></li>
- <li class=MsoNormal style='color:black;line-height:16.9pt;background:white'><span
-     style='font-size:11.5pt;font-family:"Verdana",sans-serif'>LAST() - Returns
-     the last value</span></li>
- <li class=MsoNormal style='color:black;line-height:16.9pt;background:white'><span
-     style='font-size:11.5pt;font-family:"Verdana",sans-serif'>MAX() - Returns
-     the largest value</span></li>
- <li class=MsoNormal style='color:black;line-height:16.9pt;background:white'><span
-     style='font-size:11.5pt;font-family:"Verdana",sans-serif'>MIN() - Returns
-     the smallest value</span></li>
- <li class=MsoNormal style='color:black;line-height:16.9pt;background:white'><span
-     style='font-size:11.5pt;font-family:"Verdana",sans-serif'>SUM() - Returns
-     the sum</span></li>
-</ul>
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>insert</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:blue'>into</span> dept <span style='color:blue'>values </span><span
+style='color:gray'>(</span>60<span style='color:gray'>,</span><span
+style='color:red'>'NEW DEPT'</span><span style='color:gray'>,</span><span
+style='color:red'>'LOS ANGELES'</span><span style='color:gray'>);</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>select</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:gray'>*</span> <span style='color:blue'>from</span> dept<span
+style='color:gray'>;</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>rollback</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:blue'>transaction</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>select</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:gray'>*</span> <span style='color:blue'>from</span> dept<span
+style='color:gray'>;</span></span></p>
 
 <p class=MsoNormal>&nbsp;</p>
 
-<p class=MsoNormal>Scalar SQL Functions</p>
+<p class=MsoNormal>&nbsp;</p>
 
-<ul type=disc>
- <li class=MsoNormal style='color:black;line-height:16.9pt;background:white'><span
-     style='font-size:11.5pt;font-family:"Verdana",sans-serif'>UCASE() -
-     Converts a field to upper case</span></li>
- <li class=MsoNormal style='color:black;line-height:16.9pt;background:white'><span
-     style='font-size:11.5pt;font-family:"Verdana",sans-serif'>LCASE() -
-     Converts a field to lower case</span></li>
- <li class=MsoNormal style='color:black;line-height:16.9pt;background:white'><span
-     style='font-size:11.5pt;font-family:"Verdana",sans-serif'>MID() - Extract
-     characters from a text field</span></li>
- <li class=MsoNormal style='color:black;line-height:16.9pt;background:white'><span
-     style='font-size:11.5pt;font-family:"Verdana",sans-serif'>LEN() - Returns
-     the length of a text field</span></li>
- <li class=MsoNormal style='color:black;line-height:16.9pt;background:white'><span
-     style='font-size:11.5pt;font-family:"Verdana",sans-serif'>ROUND() - Rounds
-     a numeric field to the number of decimals specified</span></li>
- <li class=MsoNormal style='color:black;line-height:16.9pt;background:white'><span
-     style='font-size:11.5pt;font-family:"Verdana",sans-serif'>NOW() - Returns
-     the current system date and time</span></li>
- <li class=MsoNormal style='color:black;line-height:16.9pt;background:white'><span
-     style='font-size:11.5pt;font-family:"Verdana",sans-serif'>FORMAT() -
-     Formats how a field is to be displayed</span></li>
-</ul>
+<p class=MsoNormal><b>Update data</b></p>
+
+<p class=MsoNormal><b>Delete data</b></p>
+
+<p class=MsoNormal><b><span style='font-size:14.0pt;line-height:107%'>SQL
+Functions</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-family:"Segoe UI",sans-serif;
+color:black'>We will follow Microsoft SQL Server documentation. This way you
+have reference to where to find information in future.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-family:"Segoe UI",sans-serif;
+color:black'>https://msdn.microsoft.com/en-us/library/ms174318.aspx</span></p>
 
 <p class=MsoNormal>&nbsp;</p>
 
