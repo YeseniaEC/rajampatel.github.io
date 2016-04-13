@@ -405,12 +405,57 @@ color:#444444'>&nbsp;</span></span><span style='font-size:10.5pt;font-family:
 "Arial",sans-serif;color:#444444'>is an all-or-none proposition.</span></p>
 
 <p style='margin-top:0in;margin-right:0in;margin-bottom:.25in;margin-left:0in;
+text-align:justify;line-height:18.0pt;background:white'><span style='font-size:
+10.0pt;font-family:"Segoe UI",sans-serif;color:#2A2A2A'>The atomicity property
+identifies that the transaction is atomic. An<span class=apple-converted-space>&nbsp;</span></span><b
+style='orphans: auto;text-align:start;widows: 1;-webkit-text-stroke-width: 0px;
+word-spacing:0px'>atomic transaction</b><span class=apple-converted-space><span
+style='orphans: auto;text-align:start;widows: 1;-webkit-text-stroke-width: 0px;
+float:none;word-spacing:0px'>&nbsp;</span>is either fully completed, or is not
+begun at all. Any updates that a transaction might affect on a system are
+completed in their entirety. If for any reason an error occurs and the
+transaction is unable to complete all of its steps, the then system is returned
+to the state it was in before the transaction was started. An example of an
+atomic transaction is an account transfer transaction. The money is removed
+from account A then placed into account B. If the system fails after removing
+the money from account A, then the transaction processing system will put the
+money back into account A, thus returning the system to its original state.
+This is known as a<span class=apple-converted-space>&nbsp;</span></span><b
+style='orphans: auto;text-align:start;widows: 1;-webkit-text-stroke-width: 0px;
+word-spacing:0px'>rollback<span style='orphans: auto;text-align:start;
+widows: 1;-webkit-text-stroke-width: 0px;float:none;word-spacing:0px'>.</b></span></p>
+
+<p style='margin-top:0in;margin-right:0in;margin-bottom:.25in;margin-left:0in;
 text-align:justify;line-height:18.0pt;background:white'><strong><span
 style='font-size:10.5pt;font-family:"Arial",sans-serif;color:#444444'>Consistency</span></strong><span
 class=apple-converted-space><span style='font-size:10.5pt;font-family:"Arial",sans-serif;
 color:#444444'>&nbsp;</span></span><span style='font-size:10.5pt;font-family:
 "Arial",sans-serif;color:#444444'>guarantees that a transaction never leaves
 your database in a half-finished state. This is also applied during queries.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+13.5pt'><span style='font-size:10.0pt;font-family:"Segoe UI",sans-serif;
+color:#2A2A2A'>A transaction enforces&nbsp;<b>consistency</b>&nbsp;in the system
+state by ensuring that at the end of any transaction the system is in a valid
+state. If the transaction completes successfully, then all changes to the
+system will have been properly made, and the system will be in a valid state.
+If any error occurs in a transaction, then any changes already made will be
+automatically rolled back. This will return the system to its state before the
+transaction was started. Since the system was in a consistent state when the
+transaction was started, it will once again be in a consistent state.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+13.5pt'><span style='font-size:10.0pt;font-family:"Segoe UI",sans-serif;
+color:#2A2A2A'>Looking again at the account transfer system, the system is
+consistent if the total of all accounts is constant. If an error occurs and the
+money is removed from account A and not added to account B, then the total in
+all accounts would have changed. The system would no longer be consistent. By
+rolling back the removal from account A, the total will again be what it should
+be, and the system back in a consistent state.</span></p>
+
+<p style='margin-top:0in;margin-right:0in;margin-bottom:.25in;margin-left:0in;
+text-align:justify;line-height:18.0pt;background:white'><strong><span
+style='font-size:10.5pt;font-family:"Arial",sans-serif;color:#444444'>&nbsp;</span></strong></p>
 
 <p style='margin-top:0in;margin-right:0in;margin-bottom:.25in;margin-left:0in;
 text-align:justify;line-height:18.0pt;background:white'><strong><span
@@ -421,6 +466,23 @@ color:#444444'>&nbsp;</span></span><span style='font-size:10.5pt;font-family:
 until they’re finished.</span></p>
 
 <p style='margin-top:0in;margin-right:0in;margin-bottom:.25in;margin-left:0in;
+text-align:justify;line-height:18.0pt;background:white'><span style='font-size:
+10.0pt;font-family:"Segoe UI",sans-serif;color:#2A2A2A'>When a transaction runs
+in<span class=apple-converted-space>&nbsp;</span></span><b style='orphans: auto;
+text-align:start;widows: 1;-webkit-text-stroke-width: 0px;word-spacing:0px'>isolation</b><span
+style='orphans: auto;text-align:start;widows: 1;-webkit-text-stroke-width: 0px;
+float:none;word-spacing:0px'>, it appears to be the only action that the system
+is carrying out at one time. If there are two transactions that are both
+performing the same function and are running at the same time, transaction
+isolation will ensure that each transaction thinks it has exclusive use of the
+system. This is important in that as the transaction is being executed, the
+state of the system may not be consistent. The transaction ensures that the
+system remains consistent after the transaction ends, but during an individual
+transaction, this may not be the case. If a transaction was not running in
+isolation, it could access data from the system that may not be consistent. By
+providing transaction isolation, this is prevented from happening.</span></span></p>
+
+<p style='margin-top:0in;margin-right:0in;margin-bottom:.25in;margin-left:0in;
 text-align:justify;line-height:18.0pt;background:white'><strong><span
 style='font-size:10.5pt;font-family:"Arial",sans-serif;color:#444444'>Durability</span></strong><span
 class=apple-converted-space><span style='font-size:10.5pt;font-family:"Arial",sans-serif;
@@ -429,7 +491,22 @@ color:#444444'>&nbsp;</span></span><span style='font-size:10.5pt;font-family:
 of pending changes in such a way that the server can recover from an abnormal
 termination.</span></p>
 
-<p class=MsoNormal>Transaction management</p>
+<p style='margin-top:0in;margin-right:0in;margin-bottom:.25in;margin-left:0in;
+text-align:justify;line-height:18.0pt;background:white'><span style='font-size:
+10.0pt;font-family:"Segoe UI",sans-serif;color:#2A2A2A'>A transaction is<span
+class=apple-converted-space>&nbsp;</span></span><b style='orphans: auto;
+text-align:start;widows: 1;-webkit-text-stroke-width: 0px;word-spacing:0px'>durable</b><span
+class=apple-converted-space><span style='orphans: auto;text-align:start;
+widows: 1;-webkit-text-stroke-width: 0px;float:none;word-spacing:0px'>&nbsp;</span>in
+that once it has been successfully completed, all of the changes it made to the
+system are permanent. There are safeguards that will prevent the loss of
+information, even in the case of system failure. By logging the steps that the
+transaction performs, the state of the system can be recreated even if the
+hardware itself has failed. The concept of durability allows the developer to
+know that a completed transaction is a permanent part of the system, regardless
+of what happens to the system later on.</span></span></p>
+
+<p class=MsoNormal><b>Transaction management</b></p>
 
 <p class=MsoNormal>Below is the example of how to manage your transaction. We
 will discuss in detail.</p>
