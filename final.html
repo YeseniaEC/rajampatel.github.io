@@ -16,6 +16,9 @@
 	{font-family:Calibri;
 	panose-1:2 15 5 2 2 2 4 3 2 4;}
 @font-face
+	{font-family:"Segoe UI";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+@font-face
 	{font-family:Consolas;
 	panose-1:2 11 6 9 2 2 4 3 2 4;}
  /* Style Definitions */
@@ -27,6 +30,11 @@
 	line-height:107%;
 	font-size:11.0pt;
 	font-family:"Calibri",sans-serif;}
+p
+	{margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
 pre
 	{mso-style-link:"HTML Preformatted Char";
 	margin:0in;
@@ -71,8 +79,6 @@ span.HTMLPreformattedChar
 	{mso-style-name:"HTML Preformatted Char";
 	mso-style-link:"HTML Preformatted";
 	font-family:"Courier New";}
-.MsoChpDefault
-	{font-family:"Calibri",sans-serif;}
 .MsoPapDefault
 	{margin-bottom:8.0pt;
 	line-height:107%;}
@@ -270,36 +276,27 @@ primary key. </p>
 <p class=MsoNormal>Below is the syntax to create a non-index.</p>
 
 <p class=MsoNormal><span style='font-family:Consolas;color:black;background:
-white'>CREATE INDEX index_name</span></span><span style='font-family:Consolas;
-color:black'><br style='box-sizing: border-box;orphans: auto;text-align:start;
-widows: 1;-webkit-text-stroke-width: 0px;word-spacing:0px'>
-<span style='background:white'><span style='orphans: auto;text-align:start;
-widows: 1;-webkit-text-stroke-width: 0px;float:none;word-spacing:0px'>ON
-table_name (column_name)</span></span></span></p>
+white'>CREATE INDEX index_name</span><span style='font-family:Consolas;
+color:black'><br>
+<span style='background:white'>ON table_name (column_name)</span></span></p>
 
 <p class=MsoNormal><span style='font-family:Consolas;color:black;background:
 white'>You can also create a unique index. This will help store data uniquely
 in a column or columns and find data fast if it is used right in the query.</span></p>
 
 <p class=MsoNormal><span style='font-family:Consolas;color:black;background:
-white'>CREATE UNIQUE INDEX index_name</span></span><span style='font-family:
-Consolas;color:black'><br style='box-sizing: border-box;orphans: auto;
-text-align:start;widows: 1;-webkit-text-stroke-width: 0px;word-spacing:0px'>
-<span style='background:white'><span style='orphans: auto;text-align:start;
-widows: 1;-webkit-text-stroke-width: 0px;float:none;word-spacing:0px'>ON
-table_name (column_name)</span></span></span></p>
+white'>CREATE UNIQUE INDEX index_name</span><span style='font-family:Consolas;
+color:black'><br>
+<span style='background:white'>ON table_name (column_name)</span></span></p>
 
 <p class=MsoNormal><span style='font-family:Consolas;color:black;background:
 white'>You have an option to create a composite or compound unique or
 non-unique index.</span></p>
 
 <p class=MsoNormal><span style='font-family:Consolas;color:black;background:
-white'>CREATE [UNIQUE] INDEX index_name</span></span><span style='font-family:
-Consolas;color:black'><br style='box-sizing: border-box;orphans: auto;
-text-align:start;widows: 1;-webkit-text-stroke-width: 0px;word-spacing:0px'>
-<span style='background:white'><span style='orphans: auto;text-align:start;
-widows: 1;-webkit-text-stroke-width: 0px;float:none;word-spacing:0px'>ON
-table_name (column_name1,column_name2)</span></span></span></p>
+white'>CREATE [UNIQUE] INDEX index_name</span><span style='font-family:Consolas;
+color:black'><br>
+<span style='background:white'>ON table_name (column_name1,column_name2)</span></span></p>
 
 <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
 normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
@@ -822,8 +819,8 @@ color:blue'>&nbsp;</span></p>
 <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
 normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
 color:blue'>SELECT</span><span style='font-size:9.5pt;font-family:Consolas'> <span
-style='color:gray'>*</span> <span style='color:blue'>FROM</span> GetAllEmployees<span
-style='color:gray'>();</span></span></p>
+style='color:gray'>*</span> <span style='color:blue'>FROM</span>
+GetAllEmployees<span style='color:gray'>();</span></span></p>
 
 <p class=MsoNormal><b>&nbsp;</b></p>
 
@@ -973,6 +970,442 @@ normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
 color:blue'>select</span><span style='font-size:9.5pt;font-family:Consolas'> <span
 style='color:gray'>*</span> <span style='color:blue'>from</span> GetSalComm<span
 style='color:gray'>(</span>30<span style='color:gray'>);</span></span></p>
+
+<p class=MsoNormal><b>&nbsp;</b></p>
+
+<p class=MsoNormal><b>T-SQL Procedures</b></p>
+
+<p style='margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;
+margin-bottom:.0001pt;text-indent:-.25in;line-height:13.5pt'><span
+style='font-size:10.0pt;font-family:Symbol;color:#2A2A2A'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:10.0pt;font-family:"Segoe UI",sans-serif;
+color:#2A2A2A'>Accept input parameters and return multiple values in the form
+of output parameters to the calling procedure or batch.</span></p>
+
+<p style='margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;
+margin-bottom:.0001pt;text-indent:-.25in;line-height:13.5pt'><span
+style='font-size:10.0pt;font-family:Symbol;color:#2A2A2A'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:10.0pt;font-family:"Segoe UI",sans-serif;
+color:#2A2A2A'>Contain programming statements that perform operations in the
+database, including calling other procedures.</span></p>
+
+<p style='margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;
+margin-bottom:.0001pt;text-indent:-.25in;line-height:13.5pt'><span
+style='font-size:10.0pt;font-family:Symbol;color:#2A2A2A'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:10.0pt;font-family:"Segoe UI",sans-serif;
+color:#2A2A2A'>Return a status value to a calling procedure or batch to
+indicate success or failure (and the reason for failure).</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+13.15pt'><span style='font-size:10.0pt;font-family:"Courier New";color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+13.15pt'><span style='font-size:10.0pt;font-family:"Courier New";color:black'>--SQL
+Server Stored Procedure Syntax</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+13.15pt'><span style='font-size:10.0pt;font-family:"Courier New";color:black'>CREATE
+{ PROC | PROCEDURE } [schema_name.] procedure_name [ ; number ] </span></p>
+
+<pre style='line-height:13.15pt'><span style='color:black'>&nbsp;&nbsp;&nbsp;&nbsp;[ { @parameter [ type_schema_name. ] data_type } &nbsp;[ VARYING ] [ = default ] [ OUT | OUTPUT | [READONLY]</span></pre>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+13.15pt'><span style='font-size:10.0pt;font-family:"Courier New";color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+13.15pt'><span style='font-size:10.0pt;font-family:"Courier New";color:black'>&nbsp;&nbsp;&nbsp;&nbsp;]
+[ ,...n ] </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+13.15pt'><span style='font-size:10.0pt;font-family:"Courier New";color:black'>AS
+{ [ BEGIN ] sql_statement [;] [ ...n ] [ END ] }</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+13.15pt'><span style='font-size:10.0pt;font-family:"Courier New";color:black'>[;]</span></p>
+
+<p class=MsoNormal><b>&nbsp;</b></p>
+
+<p class=MsoNormal>Let’s create a procedure that updates employee salary.</p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>create</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:blue'>procedure</span> sp_update_sal @empno <span
+style='color:blue'>int</span><span style='color:gray'>,</span> @newsal <span
+style='color:blue'>numeric</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>as</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>begin</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:fuchsia'>update</span> emp</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>set</span> sal <span style='color:gray'>=</span> @newsal</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>where</span> empno <span style='color:gray'>=</span> @empno<span
+style='color:gray'>;</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>end</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>select</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:gray'>*</span> <span style='color:blue'>from</span> emp <span
+style='color:blue'>where</span> empno <span style='color:gray'>=</span> 7369</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>execute</span><span style='font-size:9.5pt;font-family:Consolas'>
+dbo<span style='color:gray'>.</span>sp_update_sal<span style='color:blue'> </span>7369<span
+style='color:gray'>,</span>1555</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>select</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:gray'>*</span> <span style='color:blue'>from</span> emp <span
+style='color:blue'>where</span> empno <span style='color:gray'>=</span> 7369</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>create</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:blue'>procedure</span> sp_update_ename @empno <span
+style='color:blue'>int</span><span style='color:gray'>,</span> @newname <span
+style='color:blue'>nvarchar</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>as</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>begin</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:fuchsia'>update</span> emp</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>set</span> ename <span style='color:gray'>=</span> @newname</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>where</span> empno <span style='color:gray'>=</span> @empno<span
+style='color:gray'>;</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>end</span></p>
+
+<p class=MsoNormal><b>&nbsp;</b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>select</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:gray'>*</span> <span style='color:blue'>from</span> emp <span
+style='color:blue'>where</span> empno <span style='color:gray'>=</span> 7369</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>execute</span><span style='font-size:9.5pt;font-family:Consolas'>
+dbo<span style='color:gray'>.</span>sp_update_ename<span style='color:blue'> </span>7369<span
+style='color:gray'>,</span> <span style='color:red'>N'APPLE'</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>select</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:gray'>*</span> <span style='color:blue'>from</span> emp <span
+style='color:blue'>where</span> empno <span style='color:gray'>=</span> 7369</span></p>
+
+<p class=MsoNormal><b>&nbsp;</b></p>
+
+<p class=MsoNormal><b>Output parameters</b></p>
+
+<p class=MsoNormal><b>&nbsp;</b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>create</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:blue'>procedure</span> sp_raise_comm @empno <span
+style='color:blue'>int</span><span style='color:gray'>,</span> @raiseby <span
+style='color:blue'>numeric</span><span style='color:gray'>,</span> @newcomm <span
+style='color:blue'>numeric</span> <span style='color:blue'>output</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>as</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>begin</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:fuchsia'>update</span> EMP</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>set</span> comm <span style='color:gray'>=</span> <span
+style='color:fuchsia'>ISNULL</span><span style='color:gray'>(</span>comm<span
+style='color:gray'>,</span>0<span style='color:gray'>)</span> <span
+style='color:gray'>+</span> @raiseby</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>where</span> empno <span style='color:gray'>=</span> @empno<span
+style='color:gray'>;</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>select</span> @newcomm <span style='color:gray'>=</span>
+comm <span style='color:blue'>from</span> emp <span style='color:blue'>where</span>
+empno <span style='color:gray'>=</span> @empno<span style='color:gray'>;</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>end</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>&nbsp;</span></p>
+
+<p class=MsoNormal><b>&nbsp;</b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>select</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:gray'>*</span> <span style='color:blue'>from</span> emp <span
+style='color:blue'>where</span> empno <span style='color:gray'>=</span> 7698</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>declare</span><span style='font-size:9.5pt;font-family:Consolas'>
+@newcomm1 <span style='color:blue'>numeric</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>exec</span><span style='font-size:9.5pt;font-family:Consolas'>
+sp_raise_comm<span style='color:blue'> </span>7698<span style='color:gray'>,</span>
+100<span style='color:gray'>,</span> @newcomm1 <span style='color:blue'>OUTPUT</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>select</span><span style='font-size:9.5pt;font-family:Consolas'>
+@newcomm1</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>&nbsp;</span></p>
+
+<p class=MsoNormal><b>CURSORS</b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>create</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:blue'>procedure</span> sp_process_employees_by_dept<span
+style='color:blue'> </span><span style='color:gray'>(</span> @deptno <span
+style='color:blue'>int</span><span style='color:gray'>)</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>as</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>begin</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>DECLARE</span> @empno <span style='color:blue'>int</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>DECLARE</span> @ename <span style='color:blue'>nvarchar</span><span
+style='color:gray'>(</span>100<span style='color:gray'>)</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>DECLARE</span> @sal <span style='color:blue'>numeric</span><span
+style='color:gray'>(</span>10<span style='color:gray'>,</span>2<span
+style='color:gray'>)</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>DECLARE</span> @comm <span style='color:blue'>numeric</span><span
+style='color:gray'>(</span>10<span style='color:gray'>,</span>2<span
+style='color:gray'>)</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>DECLARE</span> emp_by_dept_cursor <span style='color:blue'>CURSOR</span>
+<span style='color:blue'>FOR</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>SELECT</span> empno<span style='color:gray'>,</span> ename<span
+style='color:gray'>,</span> sal<span style='color:gray'>,</span> comm</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>from</span> emp</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>where</span> deptno <span style='color:gray'>=</span>
+@deptNo<span style='color:gray'>;</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>OPEN</span> emp_by_dept_cursor</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>FETCH</span> <span style='color:blue'>NEXT</span> <span
+style='color:blue'>FROM</span> emp_by_dept_cursor <span style='color:blue'>INTO</span>
+@empno<span style='color:gray'>,</span>@ename<span style='color:gray'>,</span>@sal<span
+style='color:gray'>,</span>@comm</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>WHILE</span> <span style='color:fuchsia'>@@FETCH_STATUS</span>
+<span style='color:gray'>=</span> 0</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>BEGIN</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>              <span
+style='color:green'>--SELECT @empno</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>              <span
+style='color:green'>--SELECT @ename</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>              <span
+style='color:green'>--SELECT @sal</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>              <span
+style='color:green'>--SELECT @comm</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>              <span
+style='color:blue'>SELECT</span> @empno<span style='color:gray'>,</span>@ename<span
+style='color:gray'>,</span>@sal<span style='color:gray'>,</span>@comm</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>              <span
+style='color:blue'>FETCH</span> <span style='color:blue'>NEXT</span> <span
+style='color:blue'>FROM</span> emp_by_dept_cursor <span style='color:blue'>INTO</span>
+@empno<span style='color:gray'>,</span>@ename<span style='color:gray'>,</span>@sal<span
+style='color:gray'>,</span>@comm </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>END</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>CLOSE</span> emp_by_dept_cursor</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>DEALLOCATE</span> emp_by_dept_cursor</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>end</span></p>
+
+<p class=MsoNormal><b>&nbsp;</b></p>
+
+<p class=MsoNormal><b>Views</b></p>
+
+<p class=MsoNormal><b>Syntax:</b></p>
+
+<p class=MsoNormal><span style='font-family:Consolas;color:black;background:
+white'>CREATE VIEW view_name AS</span></span><span style='font-family:Consolas;
+color:black'><br style='box-sizing: border-box;orphans: auto;text-align:start;
+widows: 1;-webkit-text-stroke-width: 0px;word-spacing:0px'>
+<span style='background:white'><span style='orphans: auto;text-align:start;
+widows: 1;-webkit-text-stroke-width: 0px;float:none;word-spacing:0px'>SELECT
+column_name(s)</span></span><br style='box-sizing: border-box;orphans: auto;
+text-align:start;widows: 1;-webkit-text-stroke-width: 0px;word-spacing:0px'>
+<span style='background:white'><span style='orphans: auto;text-align:start;
+widows: 1;-webkit-text-stroke-width: 0px;float:none;word-spacing:0px'>FROM
+table_name</span></span><br style='box-sizing: border-box;orphans: auto;
+text-align:start;widows: 1;-webkit-text-stroke-width: 0px;word-spacing:0px'>
+<span style='background:white'><span style='orphans: auto;text-align:start;
+widows: 1;-webkit-text-stroke-width: 0px;float:none;word-spacing:0px'>WHERE
+condition</span></span></span></p>
+
+<p class=MsoNormal><span style='font-family:Consolas;color:black;background:
+white'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-family:Consolas;color:black;background:
+white'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-family:Consolas;color:black;background:
+white'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-family:Consolas;color:black;background:
+white'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-family:Consolas;color:black;background:
+white'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-family:Consolas;color:black;background:
+white'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-family:Consolas;color:black;background:
+white'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-family:Consolas;color:black;background:
+white'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-family:Consolas;color:black;background:
+white'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-family:Consolas;color:black;background:
+white'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-family:Consolas;color:black;background:
+white'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-family:Consolas;color:black;background:
+white'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-family:Consolas;color:black;background:
+white'>&nbsp;</span></p>
 
 <p class=MsoNormal><b>&nbsp;</b></p>
 
