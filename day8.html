@@ -1,0 +1,1023 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Consolas;
+	panose-1:2 11 6 9 2 2 4 3 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+a:link, span.MsoHyperlink
+	{color:#0563C1;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:#954F72;
+	text-decoration:underline;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link="#0563C1" vlink="#954F72">
+
+<div class=WordSection1>
+
+<p class=MsoNormal><b>Homework</b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>create</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:blue'>procedure</span> sp_process_dept</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>as</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>begin</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>DECLARE</span> @deptno <span style='color:blue'>int</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>DECLARE</span> @dname <span style='color:blue'>nvarchar</span><span
+style='color:gray'>(</span>100<span style='color:gray'>)</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>DECLARE</span> @loc <span style='color:blue'>nvarchar</span><span
+style='color:gray'>(</span>100<span style='color:gray'>)</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>DECLARE</span> dept_cursor <span style='color:blue'>CURSOR</span>
+<span style='color:blue'>FOR</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>              <span
+style='color:blue'>SELECT</span> deptno<span style='color:gray'>,</span> dname<span
+style='color:gray'>,</span> loc</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>              <span
+style='color:blue'>from</span> dept<span style='color:gray'>;</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>OPEN</span> dept_cursor</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>FETCH</span> <span style='color:blue'>NEXT</span> <span
+style='color:blue'>FROM</span> dept_cursor <span style='color:blue'>INTO</span>
+@deptno<span style='color:gray'>,</span>@dname<span style='color:gray'>,</span>@loc</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>WHILE</span> <span style='color:fuchsia'>@@FETCH_STATUS</span>
+<span style='color:gray'>=</span> 0</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>BEGIN</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>              <span
+style='color:blue'>print</span> <span style='color:red'>N'---------'</span> <span
+style='color:gray'>+</span> <span style='color:fuchsia'>cast</span><span
+style='color:gray'>(</span>@deptno <span style='color:blue'>as</span> <span
+style='color:blue'>varchar</span><span style='color:gray'>(</span>12<span
+style='color:gray'>))</span> <span style='color:gray'>+</span> <span
+style='color:red'>'-----------'</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>              <span
+style='color:blue'>exec</span> dbo<span style='color:gray'>.</span>sp_process_employees_by_dept<span
+style='color:blue'> </span>@deptno</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>              <span
+style='color:blue'>FETCH</span> <span style='color:blue'>NEXT</span> <span
+style='color:blue'>FROM</span> dept_cursor <span style='color:blue'>INTO</span>
+@deptno<span style='color:gray'>,</span>@dname<span style='color:gray'>,</span>@loc
+</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>END</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>CLOSE</span> dept_cursor</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>DEALLOCATE</span> dept_cursor</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>end</span><span style='font-size:9.5pt;font-family:Consolas;
+color:gray'>;</span></p>
+
+<p class=MsoNormal><b>&nbsp;</b></p>
+
+<p class=MsoNormal><b>NULL Values</b></p>
+
+<p class=MsoNormal>NULL value means absence of value. It does not mean there is
+word NULL or white space stored in that field.</p>
+
+<p class=MsoNormal>To work with NULL values, you can use IS NULL or IS NOT NULL
+operators.</p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>select</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:gray'>*</span> <span style='color:blue'>from</span> emp <span
+style='color:blue'>where</span> comm <span style='color:gray'>is</span> <span
+style='color:gray'>null</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>select</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:gray'>*</span> <span style='color:blue'>from</span> emp <span
+style='color:blue'>where</span> comm <span style='color:gray'>is</span> <span
+style='color:gray'>not</span> <span style='color:gray'>null</span></span></p>
+
+<p class=MsoNormal><b>&nbsp;</b></p>
+
+<p class=MsoNormal>SQL Server provides ISNULL() function to test values. This
+can be used in query or in T-SQL programming.</p>
+
+<p class=MsoNormal><b>T-SQL control-of-flow language</b></p>
+
+<p class=MsoNormal><b>Literals: </b><a
+href="http://www.techonthenet.com/sql_server/literals.php"><b>http://www.techonthenet.com/sql_server/literals.php</b></a></p>
+
+<p class=MsoNormal><b>Variables:</b> <a
+href="http://www.techonthenet.com/sql_server/declare_vars.php"><b>http://www.techonthenet.com/sql_server/declare_vars.php</b></a></p>
+
+<p class=MsoNormal><b>LOOP and CONDITIONAL STATEMENTS</b></p>
+
+<p class=MsoNormal><b><span style='font-size:14.0pt;line-height:107%'>IF..ELSE</span>:
+</b><a href="http://www.techonthenet.com/sql_server/loops/if_then.php"><b>http://www.techonthenet.com/sql_server/loops/if_then.php</b></a></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>ALTER</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:blue'>procedure</span> [dbo]<span style='color:gray'>.</span>[sp_process_employees_by_dept]<span
+style='color:blue'> </span><span style='color:gray'>(</span> @deptno <span
+style='color:blue'>int</span><span style='color:gray'>)</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>as</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>begin</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>DECLARE</span> @empno <span style='color:blue'>int</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>DECLARE</span> @ename <span style='color:blue'>nvarchar</span><span
+style='color:gray'>(</span>100<span style='color:gray'>)</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>DECLARE</span> @sal <span style='color:blue'>numeric</span><span
+style='color:gray'>(</span>10<span style='color:gray'>,</span>2<span
+style='color:gray'>)</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>DECLARE</span> emp_by_dept_cursor <span style='color:blue'>CURSOR</span>
+<span style='color:blue'>FOR</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>SELECT</span> empno<span style='color:gray'>,</span> ename<span
+style='color:gray'>,</span> sal</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>from</span> emp</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>where</span> deptno <span style='color:gray'>=</span>
+@deptNo<span style='color:gray'>;</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>OPEN</span> emp_by_dept_cursor</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>FETCH</span> <span style='color:blue'>NEXT</span> <span
+style='color:blue'>FROM</span> emp_by_dept_cursor <span style='color:blue'>INTO</span>
+@empno<span style='color:gray'>,</span>@ename<span style='color:gray'>,</span>@sal</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>WHILE</span> <span style='color:fuchsia'>@@FETCH_STATUS</span>
+<span style='color:gray'>=</span> 0</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>BEGIN</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>              <span
+style='color:green'>--SELECT @empno</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>              <span
+style='color:green'>--SELECT @ename</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>              <span
+style='color:green'>--SELECT @sal</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>              <span
+style='color:green'>--SELECT @comm</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>              <span
+style='color:blue'>SELECT</span> @empno<span style='color:gray'>,</span>@ename<span
+style='color:gray'>,</span>@sal</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>              <span
+style='color:blue'>FETCH</span> <span style='color:blue'>NEXT</span> <span
+style='color:blue'>FROM</span> emp_by_dept_cursor <span style='color:blue'>INTO</span>
+@empno<span style='color:gray'>,</span>@ename<span style='color:gray'>,</span>@sal</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>END</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>CLOSE</span> emp_by_dept_cursor</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>DEALLOCATE</span> emp_by_dept_cursor</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>End</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>CREATE</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:blue'>procedure</span> [dbo]<span style='color:gray'>.</span>[sp_process_employees_by_sales_dept]<span
+style='color:blue'> </span><span style='color:gray'>(</span> @deptno <span
+style='color:blue'>int</span><span style='color:gray'>)</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>as</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>begin</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>DECLARE</span> @empno <span style='color:blue'>int</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>DECLARE</span> @ename <span style='color:blue'>nvarchar</span><span
+style='color:gray'>(</span>100<span style='color:gray'>)</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>DECLARE</span> @sal <span style='color:blue'>numeric</span><span
+style='color:gray'>(</span>10<span style='color:gray'>,</span>2<span
+style='color:gray'>)</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>DECLARE</span> @comm <span style='color:blue'>numeric</span><span
+style='color:gray'>(</span>10<span style='color:gray'>,</span>2<span
+style='color:gray'>)</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>DECLARE</span> emp_by_dept_cursor <span style='color:blue'>CURSOR</span>
+<span style='color:blue'>FOR</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>SELECT</span> empno<span style='color:gray'>,</span> ename<span
+style='color:gray'>,</span> sal<span style='color:gray'>,</span> comm</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>from</span> emp</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>where</span> deptno <span style='color:gray'>=</span>
+@deptNo<span style='color:gray'>;</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>OPEN</span> emp_by_dept_cursor</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>FETCH</span> <span style='color:blue'>NEXT</span> <span
+style='color:blue'>FROM</span> emp_by_dept_cursor <span style='color:blue'>INTO</span>
+@empno<span style='color:gray'>,</span>@ename<span style='color:gray'>,</span>@sal<span
+style='color:gray'>,</span>@comm</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>WHILE</span> <span style='color:fuchsia'>@@FETCH_STATUS</span>
+<span style='color:gray'>=</span> 0</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>BEGIN</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>              <span
+style='color:green'>--SELECT @empno</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>              <span
+style='color:green'>--SELECT @ename</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>              <span
+style='color:green'>--SELECT @sal</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>              <span
+style='color:green'>--SELECT @comm</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>              <span
+style='color:blue'>SELECT</span> @empno<span style='color:gray'>,</span>@ename<span
+style='color:gray'>,</span>@sal<span style='color:gray'>,</span>@comm</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>              <span
+style='color:blue'>FETCH</span> <span style='color:blue'>NEXT</span> <span
+style='color:blue'>FROM</span> emp_by_dept_cursor <span style='color:blue'>INTO</span>
+@empno<span style='color:gray'>,</span>@ename<span style='color:gray'>,</span>@sal<span
+style='color:gray'>,</span>@comm </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>END</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>CLOSE</span> emp_by_dept_cursor</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>DEALLOCATE</span> emp_by_dept_cursor</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>end</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><b>&nbsp;</b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>create</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:blue'>procedure</span> sp_process_dept_IF</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>as</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>begin</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>DECLARE</span> @deptno <span style='color:blue'>int</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>DECLARE</span> @dname <span style='color:blue'>nvarchar</span><span
+style='color:gray'>(</span>100<span style='color:gray'>)</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>DECLARE</span> @loc <span style='color:blue'>nvarchar</span><span
+style='color:gray'>(</span>100<span style='color:gray'>)</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>DECLARE</span> dept_cursor <span style='color:blue'>CURSOR</span>
+<span style='color:blue'>FOR</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>              <span
+style='color:blue'>SELECT</span> deptno<span style='color:gray'>,</span> dname<span
+style='color:gray'>,</span> loc</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>              <span
+style='color:blue'>from</span> dept<span style='color:gray'>;</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>OPEN</span> dept_cursor</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>FETCH</span> <span style='color:blue'>NEXT</span> <span
+style='color:blue'>FROM</span> dept_cursor <span style='color:blue'>INTO</span>
+@deptno<span style='color:gray'>,</span>@dname<span style='color:gray'>,</span>@loc</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>WHILE</span> <span style='color:fuchsia'>@@FETCH_STATUS</span>
+<span style='color:gray'>=</span> 0</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>BEGIN</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>              <span
+style='color:blue'>print</span> <span style='color:red'>N'---------'</span> <span
+style='color:gray'>+</span> <span style='color:fuchsia'>cast</span><span
+style='color:gray'>(</span>@deptno <span style='color:blue'>as</span> <span
+style='color:blue'>varchar</span><span style='color:gray'>(</span>12<span
+style='color:gray'>))</span> <span style='color:gray'>+</span> <span
+style='color:red'>'-----------'</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>              <span
+style='color:blue'>IF</span> @deptno <span style='color:gray'>=</span> 30</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>                           <span
+style='color:blue'>exec</span> dbo<span style='color:gray'>.</span>sp_process_employees_by_sales_dept<span
+style='color:blue'> </span>@deptno</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>              <span
+style='color:blue'>ELSE</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>                     <span
+style='color:blue'>BEGIN</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>                           <span
+style='color:green'>--you can exexute multiple t-SQL statements if you use
+BEGIN and END</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>                           <span
+style='color:blue'>exec</span> dbo<span style='color:gray'>.</span>sp_process_employees_by_dept<span
+style='color:blue'> </span>@deptno</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>                     <span
+style='color:blue'>END</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>              <span
+style='color:blue'>FETCH</span> <span style='color:blue'>NEXT</span> <span
+style='color:blue'>FROM</span> dept_cursor <span style='color:blue'>INTO</span>
+@deptno<span style='color:gray'>,</span>@dname<span style='color:gray'>,</span>@loc
+</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>END</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>CLOSE</span> dept_cursor</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>DEALLOCATE</span> dept_cursor</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>end</span><span style='font-size:9.5pt;font-family:Consolas;
+color:gray'>;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:gray'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>ALTER</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:blue'>procedure</span> [dbo]<span style='color:gray'>.</span>[sp_process_employees_by_sales_dept]<span
+style='color:blue'> </span><span style='color:gray'>(</span> @deptno <span
+style='color:blue'>int</span><span style='color:gray'>)</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>as</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>begin</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>DECLARE</span> @empno <span style='color:blue'>int</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>DECLARE</span> @ename <span style='color:blue'>nvarchar</span><span
+style='color:gray'>(</span>100<span style='color:gray'>)</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>DECLARE</span> @sal <span style='color:blue'>numeric</span><span
+style='color:gray'>(</span>10<span style='color:gray'>,</span>2<span
+style='color:gray'>)</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>DECLARE</span> @comm <span style='color:blue'>numeric</span><span
+style='color:gray'>(</span>10<span style='color:gray'>,</span>2<span
+style='color:gray'>)</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>DECLARE</span> @hiredate <span style='color:blue'>date</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>DECLARE</span> emp_by_dept_cursor <span style='color:blue'>CURSOR</span>
+<span style='color:blue'>FOR</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>SELECT</span> empno<span style='color:gray'>,</span> ename<span
+style='color:gray'>,</span> sal<span style='color:gray'>,</span> comm<span
+style='color:gray'>,</span> hiredate</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>from</span> emp</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>where</span> deptno <span style='color:gray'>=</span>
+@deptNo<span style='color:gray'>;</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>OPEN</span> emp_by_dept_cursor</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>FETCH</span> <span style='color:blue'>NEXT</span> <span
+style='color:blue'>FROM</span> emp_by_dept_cursor <span style='color:blue'>INTO</span>
+@empno<span style='color:gray'>,</span>@ename<span style='color:gray'>,</span>@sal<span
+style='color:gray'>,</span>@comm<span style='color:gray'>,</span> @hiredate</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>WHILE</span> <span style='color:fuchsia'>@@FETCH_STATUS</span>
+<span style='color:gray'>=</span> 0</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>BEGIN</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>              <span
+style='color:green'>--SELECT @empno</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>              <span
+style='color:green'>--SELECT @ename</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>              <span
+style='color:green'>--SELECT @sal</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>              <span
+style='color:green'>--SELECT @comm</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>              <span
+style='color:blue'>IF</span> @hiredate <span style='color:gray'>&lt;=</span> <span
+style='color:red'>'1981-05-01'</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>                     <span
+style='color:blue'>SELECT</span> @empno<span style='color:gray'>,</span>@ename<span
+style='color:gray'>,</span>@sal<span style='color:gray'>,</span>@comm<span
+style='color:gray'>,</span>@hiredate<span style='color:gray'>,</span><span
+style='color:red'>N'This emp was hired before 1981-05-01'</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>              <span
+style='color:blue'>ELSE</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>                     <span
+style='color:blue'>IF</span> @comm <span style='color:gray'>&lt;</span> 600</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>                           <span
+style='color:blue'>SELECT</span> @empno<span style='color:gray'>,</span>@ename<span
+style='color:gray'>,</span>@sal<span style='color:gray'>,</span>@comm<span
+style='color:gray'>,</span>@hiredate<span style='color:gray'>,</span><span
+style='color:red'>N'commission is less that 600'</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>                     <span
+style='color:blue'>ELSE</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>                           <span
+style='color:blue'>SELECT</span> @empno<span style='color:gray'>,</span>@ename<span
+style='color:gray'>,</span>@sal<span style='color:gray'>,</span>@comm<span
+style='color:gray'>,</span>@hiredate<span style='color:gray'>,</span><span
+style='color:red'>N'commission is greater that 600'</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>              </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>              <span
+style='color:blue'>FETCH</span> <span style='color:blue'>NEXT</span> <span
+style='color:blue'>FROM</span> emp_by_dept_cursor <span style='color:blue'>INTO</span>
+@empno<span style='color:gray'>,</span>@ename<span style='color:gray'>,</span>@sal<span
+style='color:gray'>,</span>@comm <span style='color:gray'>,</span>@hiredate</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>END</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>CLOSE</span> emp_by_dept_cursor</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>DEALLOCATE</span> emp_by_dept_cursor</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>end</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:gray'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><b>&nbsp;</b></p>
+
+<p class=MsoNormal><b>WHILE : </b><a
+href="http://www.techonthenet.com/sql_server/loops/while.php"><b>http://www.techonthenet.com/sql_server/loops/while.php</b></a></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>create</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:blue'>procedure</span> loop_while</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>as</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>begin</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>DECLARE</span> @step <span style='color:blue'>INT</span> <span
+style='color:gray'>=</span> 0<span style='color:gray'>;</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>WHILE</span> @step <span style='color:gray'>&lt;=</span> 10</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>BEGIN</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>         
+<span style='color:blue'>select</span> <span style='color:red'>'Inside WHILE
+LOOP'</span><span style='color:gray'>;</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>         
+<span style='color:blue'>SET</span> @step <span style='color:gray'>=</span>
+@step <span style='color:gray'>+</span> 1<span style='color:gray'>;</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>END</span><span style='color:gray'>;</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>end</span><span style='font-size:9.5pt;font-family:Consolas;
+color:gray'>;</span></p>
+
+<p class=MsoNormal><b>&nbsp;</b></p>
+
+<p class=MsoNormal><b>&nbsp;</b></p>
+
+<p class=MsoNormal><b>BREAK: </b><a
+href="http://www.techonthenet.com/sql_server/loops/break.php"><b>http://www.techonthenet.com/sql_server/loops/break.php</b></a></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>create</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:blue'>procedure</span> loop_while_break</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>as</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>begin</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>DECLARE</span> @step <span style='color:blue'>INT</span> <span
+style='color:gray'>=</span> 0<span style='color:gray'>;</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>WHILE</span> @step <span style='color:gray'>&lt;=</span> 10</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>BEGIN</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>         
+<span style='color:blue'>IF</span> @step <span style='color:gray'>=</span> 3</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>              <span
+style='color:blue'>break</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>         
+<span style='color:blue'>select</span> <span style='color:red'>'Inside WHILE
+LOOP'</span><span style='color:gray'>;</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>         
+<span style='color:blue'>SET</span> @step <span style='color:gray'>=</span>
+@step <span style='color:gray'>+</span> 1<span style='color:gray'>;</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>END</span><span style='color:gray'>;</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>select</span> <span style='color:red'>'Exited the loop at 3'</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>end</span><span style='font-size:9.5pt;font-family:Consolas;
+color:gray'>;</span></p>
+
+<p class=MsoNormal><b>&nbsp;</b></p>
+
+<p class=MsoNormal><b>CONTINUE : </b><a
+href="http://www.techonthenet.com/sql_server/loops/continue.php"><b>http://www.techonthenet.com/sql_server/loops/continue.php</b></a></p>
+
+<p class=MsoNormal><b>&nbsp;</b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>alter</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:blue'>procedure</span> loop_while_continue</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>as</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>begin</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>DECLARE</span> @step <span style='color:blue'>INT</span><span
+style='color:gray'>;</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>SET</span> @step <span style='color:gray'>=</span> 0<span
+style='color:gray'>;</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>WHILE</span> @step <span style='color:gray'>&lt;</span> 10</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>BEGIN</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>              <span
+style='color:blue'>SET</span> @step <span style='color:gray'>=</span> @step <span
+style='color:gray'>+</span> 1<span style='color:gray'>;</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>              <span
+style='color:blue'>IF</span> @step <span style='color:gray'>&gt;</span> 7</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>              <span
+style='color:blue'>begin</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>                     <span
+style='color:blue'>print</span> <span style='color:red'>N'what break'</span> <span
+style='color:gray'>+</span> <span style='color:fuchsia'>cast</span><span
+style='color:gray'>(</span>@step <span style='color:blue'>as</span> <span
+style='color:blue'>varchar</span><span style='color:gray'>(</span>2<span
+style='color:gray'>));</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>                     <span
+style='color:blue'>break</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>              <span
+style='color:blue'>end</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>              <span
+style='color:blue'>else</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>              <span
+style='color:blue'>begin</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>                     </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>                     <span
+style='color:blue'>if</span> @step <span style='color:gray'>=</span> 5</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>                           <span
+style='color:blue'>continue</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>                     <span
+style='color:blue'>print</span> <span style='color:red'>N'what continue'</span>
+<span style='color:gray'>+</span> <span style='color:fuchsia'>cast</span><span
+style='color:gray'>(</span>@step <span style='color:blue'>as</span> <span
+style='color:blue'>varchar</span><span style='color:gray'>(</span>2<span
+style='color:gray'>));</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>                     </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>                     </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>              <span
+style='color:blue'>end</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>              </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>END</span><span style='color:gray'>;</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>PRINT</span> <span style='color:red'>'Done WHILE LOOP'</span>
+<span style='color:gray'>+</span> <span style='color:fuchsia'>cast</span><span
+style='color:gray'>(</span>@step <span style='color:blue'>as</span> <span
+style='color:blue'>varchar</span><span style='color:gray'>(</span>2<span
+style='color:gray'>));</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>end</span><span style='font-size:9.5pt;font-family:Consolas;
+color:gray'>;</span></p>
+
+<p class=MsoNormal><b>&nbsp;</b></p>
+
+<p class=MsoNormal><b>&nbsp;</b></p>
+
+<p class=MsoNormal><b>&nbsp;</b></p>
+
+</div>
+
+</body>
+
+</html>
