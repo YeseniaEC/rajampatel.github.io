@@ -1,0 +1,761 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Segoe UI";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+@font-face
+	{font-family:Consolas;
+	panose-1:2 11 6 9 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Trebuchet MS";
+	panose-1:2 11 6 3 2 2 2 2 2 4;}
+@font-face
+	{font-family:inherit;
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+h3
+	{mso-style-link:"Heading 3 Char";
+	margin-right:0in;
+	margin-left:0in;
+	font-size:13.5pt;
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+p
+	{margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+pre
+	{mso-style-link:"HTML Preformatted Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Courier New";}
+span.apple-converted-space
+	{mso-style-name:apple-converted-space;}
+span.Heading3Char
+	{mso-style-name:"Heading 3 Char";
+	mso-style-link:"Heading 3";
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+span.HTMLPreformattedChar
+	{mso-style-name:"HTML Preformatted Char";
+	mso-style-link:"HTML Preformatted";
+	font-family:"Courier New";}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US>
+
+<div class=WordSection1>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+13.5pt'><span style='font-size:10.0pt;font-family:"Segoe UI",sans-serif;
+color:#2A2A2A'>Two special tables are used in trigger statements: the&nbsp;<b>deleted</b>&nbsp;table
+and the&nbsp;<b>inserted</b>&nbsp;table. Microsoft® SQL Server™ automatically
+creates and manages these tables. You can use these temporary, memory-resident
+tables to test the effects of certain data modifications and to set conditions
+for trigger actions; however, you cannot alter the data in the tables directly.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+13.5pt'><span style='font-size:10.0pt;font-family:"Segoe UI",sans-serif;
+color:#2A2A2A'>The&nbsp;<b>inserted</b>&nbsp;and&nbsp;<b>deleted</b>&nbsp;tables
+are used primarily in triggers to:</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='color:#2A2A2A;margin-bottom:12.0pt;line-height:
+     13.15pt'><span style='font-size:10.0pt;font-family:"Segoe UI",sans-serif'>Extend
+     referential integrity between tables.</span></li>
+ <li class=MsoNormal style='color:#2A2A2A;margin-bottom:12.0pt;line-height:
+     13.15pt'><span style='font-size:10.0pt;font-family:"Segoe UI",sans-serif'>Insert
+     or update data in base tables underlying a view.</span></li>
+ <li class=MsoNormal style='color:#2A2A2A;margin-bottom:12.0pt;line-height:
+     13.15pt'><span style='font-size:10.0pt;font-family:"Segoe UI",sans-serif'>Check
+     for errors and take action based on the error.</span></li>
+ <li class=MsoNormal style='color:#2A2A2A;line-height:13.15pt'><span
+     style='font-size:10.0pt;font-family:"Segoe UI",sans-serif'>Find the
+     difference between the state of a table before and after a data
+     modification and take action(s) based on that difference.</span></li>
+</ul>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+13.5pt'><span style='font-size:10.0pt;font-family:"Segoe UI",sans-serif;
+color:#2A2A2A'>The&nbsp;<b>deleted</b>&nbsp;table stores copies of the affected
+rows during DELETE and UPDATE statements. During the execution of a DELETE or
+UPDATE statement, rows are deleted from the trigger table and transferred to
+the&nbsp;<b>deleted</b>&nbsp;table. The&nbsp;<b>deleted</b>&nbsp;table and the
+trigger table ordinarily have no rows in common.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+13.5pt'><span style='font-size:10.0pt;font-family:"Segoe UI",sans-serif;
+color:#2A2A2A'>The&nbsp;<b>inserted</b>&nbsp;table stores copies of the affected
+rows during INSERT and UPDATE statements. During an insert or update
+transaction, new rows are added simultaneously to both the&nbsp;<b>inserted</b>&nbsp;table
+and the trigger table. The rows in the&nbsp;<b>inserted</b>&nbsp;table are
+copies of the new rows in the trigger table.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+13.5pt'><span style='font-size:10.0pt;font-family:"Segoe UI",sans-serif;
+color:#2A2A2A'>An update transaction is similar to a delete operation followed
+by an insert operation; the old rows are copied to the&nbsp;<b>deleted</b>&nbsp;table
+first, and then the new rows are copied to the trigger table and to the&nbsp;<b>inserted</b>&nbsp;table.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+13.5pt'><span style='font-size:10.0pt;font-family:"Segoe UI",sans-serif;
+color:#2A2A2A'>When you set trigger conditions, use the&nbsp;<b>inserted</b>&nbsp;and&nbsp;<b>deleted</b>&nbsp;tables
+appropriately for the action that fired the trigger. Although referencing the&nbsp;<b>deleted</b>&nbsp;table
+while testing an INSERT, or the&nbsp;<b>inserted</b>&nbsp;table while testing a
+DELETE does not cause any errors, these trigger test tables do not contain any
+rows in these cases.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+13.5pt'><span style='font-size:10.0pt;font-family:"Segoe UI",sans-serif;
+color:#2A2A2A'>&nbsp;</span></p>
+
+<div style='border:none;border-bottom:solid #C2C2C2 1.0pt;padding:0in 0in 0in 0in'>
+
+<h3 style='margin-top:7.5pt;margin-right:0in;margin-bottom:0in;margin-left:
+0in;margin-bottom:.0001pt;border:none;padding:0in'><a
+name=oracle-before-insert-and-for-each-row-tr><span
+class=apple-converted-space><span style='font-size:15.5pt;font-family:"inherit",serif;
+color:black'>&nbsp;</span></span></a><span style='font-size:15.5pt;font-family:
+"inherit",serif;color:black'>Trigger Overriding Inserted Values</span></h3>
+
+</div>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+13.5pt'><span style='font-size:10.0pt;font-family:"Segoe UI",sans-serif;
+color:#2A2A2A'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>CREATE</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:blue'>TABLE</span> cities</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>  </span><span style='font-size:9.5pt;font-family:Consolas;
+color:gray'>(</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>    
+id <span style='color:blue'>INT</span> <span style='color:blue'>PRIMARY</span> <span
+style='color:blue'>KEY</span><span style='color:gray'>,</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>    
+name <span style='color:blue'>VARCHAR</span><span style='color:gray'>(</span>90<span
+style='color:gray'>),</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>    
+created <span style='color:blue'>DATETIME</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'> 
+<span style='color:gray'>);</span> </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'> </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'> 
+<span style='color:green'>-- Drop the trigger if exists</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'> 
+<span style='color:blue'>IF</span> <span style='color:fuchsia'>OBJECT_ID</span><span
+style='color:gray'>(</span><span style='color:red'>'tr_cities_insert'</span><span
+style='color:gray'>,</span> <span style='color:red'>'TR'</span><span
+style='color:gray'>)</span> <span style='color:gray'>IS</span> <span
+style='color:gray'>NOT</span> <span style='color:gray'>NULL</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>DROP</span> <span style='color:blue'>TRIGGER</span>
+tr_cities_insert</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'> 
+<span style='color:green'>-- Trigger sets the value for 'created' column</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'> 
+<span style='color:blue'>CREATE</span> <span style='color:blue'>TRIGGER</span>
+tr_cities_insert <span style='color:blue'>ON</span> cities <span
+style='color:blue'>AFTER</span> <span style='color:blue'>INSERT</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'> 
+<span style='color:blue'>AS</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'> 
+<span style='color:blue'>BEGIN</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>   
+<span style='color:fuchsia'>UPDATE</span> cities</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>    
+<span style='color:blue'>SET</span> created <span style='color:gray'>=</span> <span
+style='color:fuchsia'>GETDATE</span><span style='color:gray'>()</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>   
+<span style='color:blue'>FROM</span> inserted </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>   
+<span style='color:blue'>WHERE</span> cities<span style='color:gray'>.</span>id
+<span style='color:gray'>=</span> inserted<span style='color:gray'>.</span>id<span
+style='color:gray'>;</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'> 
+<span style='color:blue'>END</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>INSERT</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:blue'>INTO</span> cities<span style='color:blue'> </span><span
+style='color:gray'>(</span>id<span style='color:gray'>,</span> name<span
+style='color:gray'>)</span>  <span style='color:blue'>VALUES </span><span
+style='color:gray'>(</span>1<span style='color:gray'>,</span> <span
+style='color:red'>'Paris'</span><span style='color:gray'>);</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>&nbsp;</span></p>
+
+<div style='border:none;border-bottom:solid #C2C2C2 1.0pt;padding:0in 0in 0in 0in'>
+
+<h3 style='margin-top:7.5pt;margin-right:0in;margin-bottom:0in;margin-left:
+0in;margin-bottom:.0001pt;border:none;padding:0in'><a
+name=oracle-before-update-and-for-each-row-tr><span style='font-size:15.5pt;
+font-family:"inherit",serif;color:black'>Trigger Referencing New and Old Values</span></a></h3>
+
+</div>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:gray'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:gray'> -</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:blue'>Trigger</span> does <span style='color:gray'>not</span>
+allow <span style='color:blue'>to</span> change <span style='color:red'>'created'</span>
+value <span style='color:gray'>and</span> <span style='color:blue'>to</span> <span
+style='color:blue'>set</span> <span style='color:gray'>//</span>name<span
+style='color:gray'>//</span> <span style='color:blue'>to</span> <span
+style='color:gray'>NULL</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'> 
+<span style='color:blue'>CREATE</span> <span style='color:blue'>TRIGGER</span>
+tr_cities_update <span style='color:blue'>ON</span> cities <span
+style='color:blue'>AFTER</span> <span style='color:fuchsia'>UPDATE</span> </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'> 
+<span style='color:blue'>AS</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'> 
+<span style='color:blue'>BEGIN</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>   
+<span style='color:fuchsia'>UPDATE</span> cities</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>     
+<span style='color:blue'>SET</span> created <span style='color:gray'>=</span>
+deleted<span style='color:gray'>.</span>created</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>   
+<span style='color:blue'>FROM</span> deleted</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>   
+<span style='color:blue'>WHERE</span> cities<span style='color:gray'>.</span>id
+<span style='color:gray'>=</span> deleted<span style='color:gray'>.</span>id<span
+style='color:gray'>;</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'> </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>   
+<span style='color:fuchsia'>UPDATE</span> cities</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>     
+<span style='color:blue'>SET</span> name <span style='color:gray'>=</span> <span
+style='color:red'>'Not defined'</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>   
+<span style='color:blue'>FROM</span> inserted<span style='color:gray'>,</span>
+deleted</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>   
+<span style='color:blue'>WHERE</span> cities<span style='color:gray'>.</span>id
+<span style='color:gray'>=</span> inserted<span style='color:gray'>.</span>id <span
+style='color:gray'>AND</span> inserted<span style='color:gray'>.</span>id <span
+style='color:gray'>=</span> deleted<span style='color:gray'>.</span>id <span
+style='color:gray'>AND</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>           
+deleted<span style='color:gray'>.</span>name <span style='color:gray'>IS</span>
+<span style='color:gray'>NOT</span> <span style='color:gray'>NULL</span> <span
+style='color:gray'>AND</span> inserted<span style='color:gray'>.</span>name <span
+style='color:gray'>IS</span> <span style='color:gray'>NULL;</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'> 
+<span style='color:blue'>END</span></span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>  
+<span style='color:fuchsia'>UPDATE</span> cities </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>  
+<span style='color:blue'>SET</span> created <span style='color:gray'>=</span> <span
+style='color:fuchsia'>CONVERT</span><span style='color:gray'>(</span><span
+style='color:blue'>DATETIME</span><span style='color:gray'>,</span> <span
+style='color:red'>'2010-06-02'</span><span style='color:gray'>),</span> name <span
+style='color:gray'>=</span> <span style='color:gray'>NULL</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>  
+<span style='color:blue'>WHERE</span> id <span style='color:gray'>=</span> 1<span
+style='color:gray'>;</span></span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<div style='border:none;border-bottom:solid #C2C2C2 1.0pt;padding:0in 0in 0in 0in'>
+
+<p class=MsoNormal style='margin-top:7.5pt;margin-right:0in;margin-bottom:0in;
+margin-left:0in;margin-bottom:.0001pt;border:none;padding:0in'><a
+name=oracle-multi-action-trigger-generating-i><b><span style='font-size:15.5pt;
+font-family:"inherit",serif;color:black'>Multi-Action Trigger Generating IDs</span></b></a></p>
+
+</div>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>CREATE</span><span style='font-size:9.5pt;font-family:Consolas'> <span
+style='color:blue'>SEQUENCE</span> cities_seq START <span style='color:blue'>WITH</span>
+1 INCREMENT <span style='color:blue'>BY</span> 1<span style='color:gray'>;</span>
+</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'> </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>  
+<span style='color:green'>-- Define a table</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'> 
+<span style='color:blue'>CREATE</span> <span style='color:blue'>TABLE</span>
+cities</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>  </span><span style='font-size:9.5pt;font-family:Consolas;
+color:gray'>(</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>    
+id <span style='color:blue'>INT</span> <span style='color:blue'>PRIMARY</span> <span
+style='color:blue'>KEY</span><span style='color:gray'>,</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>    
+name <span style='color:blue'>VARCHAR</span><span style='color:gray'>(</span>90<span
+style='color:gray'>),</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>    
+created <span style='color:blue'>DATETIME</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'> 
+<span style='color:gray'>);</span> </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'> </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'> 
+<span style='color:green'>-- Add DEFAULT to generate ID</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'> 
+<span style='color:blue'>ALTER</span> <span style='color:blue'>TABLE</span>
+cities <span style='color:blue'>ADD</span> <span style='color:blue'>DEFAULT</span>
+<span style='color:blue'>NEXT</span> VALUE <span style='color:blue'>FOR</span>
+cities_seq <span style='color:blue'>FOR</span> id<span style='color:gray'>;</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'> </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'> 
+<span style='color:green'>-- Drop the trigger if exists</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'> 
+<span style='color:blue'>IF</span> <span style='color:fuchsia'>OBJECT_ID</span><span
+style='color:gray'>(</span><span style='color:red'>'cities_id_tr'</span><span
+style='color:gray'>,</span> <span style='color:red'>'TR'</span><span
+style='color:gray'>)</span> <span style='color:gray'>IS</span> <span
+style='color:gray'>NOT</span> <span style='color:gray'>NULL</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       <span
+style='color:blue'>DROP</span> <span style='color:blue'>TRIGGER</span>
+cities_id_tr</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'> 
+<span style='color:blue'>GO</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'> </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'> 
+<span style='color:green'>-- Create a trigger to override inserted and updated
+values</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'> 
+<span style='color:blue'>CREATE</span> <span style='color:blue'>TRIGGER</span>
+cities_id_tr <span style='color:blue'>ON</span> cities <span style='color:blue'>AFTER</span>
+<span style='color:blue'>INSERT</span><span style='color:gray'>,</span> <span
+style='color:fuchsia'>UPDATE</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'> 
+<span style='color:blue'>AS</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'> 
+<span style='color:blue'>BEGIN</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>    
+<span style='color:green'>-- Check for INSERT operation</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>    
+<span style='color:blue'>IF</span> <span style='color:gray'>NOT</span> <span
+style='color:gray'>EXISTS</span><span style='color:blue'> </span><span
+style='color:gray'>(</span><span style='color:blue'>SELECT</span> <span
+style='color:gray'>*</span> <span style='color:blue'>FROM</span> deleted<span
+style='color:gray'>)</span> <span style='color:blue'>BEGIN</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'> </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       
+<span style='color:green'>-- Override created date</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       
+<span style='color:fuchsia'>UPDATE</span> cities</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>         
+<span style='color:blue'>SET</span> created <span style='color:gray'>=</span> <span
+style='color:fuchsia'>GETDATE</span><span style='color:gray'>()</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       
+<span style='color:blue'>FROM</span> inserted</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       
+<span style='color:blue'>WHERE</span> cities<span style='color:gray'>.</span>id
+<span style='color:gray'>=</span> inserted<span style='color:gray'>.</span>id<span
+style='color:gray'>;</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>    
+<span style='color:blue'>END</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'> </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>     
+<span style='color:green'>-- Check for UPDATE operation</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>     
+<span style='color:blue'>IF</span> <span style='color:gray'>EXISTS</span><span
+style='color:blue'> </span><span style='color:gray'>(</span><span
+style='color:blue'>SELECT</span> <span style='color:gray'>*</span> <span
+style='color:blue'>FROM</span> deleted<span style='color:gray'>)</span> <span
+style='color:blue'>BEGIN</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       
+<span style='color:fuchsia'>UPDATE</span> cities</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>         
+<span style='color:blue'>SET</span> created <span style='color:gray'>=</span>
+deleted<span style='color:gray'>.</span>created</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       
+<span style='color:blue'>FROM</span> inserted<span style='color:gray'>,</span>
+deleted</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>       
+<span style='color:blue'>WHERE</span> cities<span style='color:gray'>.</span>id
+<span style='color:gray'>=</span> inserted<span style='color:gray'>.</span>id <span
+style='color:gray'>AND</span> inserted<span style='color:gray'>.</span>id <span
+style='color:gray'>=</span> deleted<span style='color:gray'>.</span>id<span
+style='color:gray'>;</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>     
+<span style='color:blue'>END</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'> 
+<span style='color:blue'>END</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'> 
+<span style='color:blue'>GO</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'> </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'> 
+<span style='color:green'>-- Insert a row (ID will be automatically assigned)</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'> 
+<span style='color:blue'>INSERT</span> <span style='color:blue'>INTO</span>
+cities<span style='color:blue'> </span><span style='color:gray'>(</span>name<span
+style='color:gray'>)</span> <span style='color:blue'>VALUES </span><span
+style='color:gray'>(</span><span style='color:red'>'London'</span><span
+style='color:gray'>);</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'> 
+<span style='color:green'>-- Try to change 'created' date (trigger will set the
+original value back)</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'> 
+<span style='color:fuchsia'>UPDATE</span> cities <span style='color:blue'>SET</span>
+created <span style='color:gray'>=</span> <span style='color:fuchsia'>CONVERT</span><span
+style='color:gray'>(</span><span style='color:blue'>DATETIME</span><span
+style='color:gray'>,</span> <span style='color:red'>'2003-07-24'</span><span
+style='color:gray'>);</span></span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><b><span style='font-size:14.0pt;line-height:107%'>Sequence
+Syntax:</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+13.15pt'><span style='font-size:10.0pt;font-family:"Courier New";color:black'>CREATE
+SEQUENCE [schema_name . ] sequence_name</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+13.15pt'><span style='font-size:10.0pt;font-family:"Courier New";color:black'>   
+[ AS [ built_in_integer_type | user-defined_integer_type ] ]</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+13.15pt'><span style='font-size:10.0pt;font-family:"Courier New";color:black'>   
+[ START WITH &lt;constant&gt; ]</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+13.15pt'><span style='font-size:10.0pt;font-family:"Courier New";color:black'>   
+[ INCREMENT BY &lt;constant&gt; ]</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+13.15pt'><span style='font-size:10.0pt;font-family:"Courier New";color:black'>   
+[ { MINVALUE [ &lt;constant&gt; ] } | { NO MINVALUE } ]</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+13.15pt'><span style='font-size:10.0pt;font-family:"Courier New";color:black'>   
+[ { MAXVALUE [ &lt;constant&gt; ] } | { NO MAXVALUE } ]</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+13.15pt'><span style='font-size:10.0pt;font-family:"Courier New";color:black'>   
+[ CYCLE | { NO CYCLE } ]</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+13.15pt'><span style='font-size:10.0pt;font-family:"Courier New";color:black'>   
+[ { CACHE [ &lt;constant&gt; ] } | { NO CACHE } ]</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+13.15pt'><span style='font-size:10.0pt;font-family:"Courier New";color:black'>   
+[ ; ]</span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Syntax to select value from sequence:</p>
+
+<pre style='line-height:13.15pt'><span style='color:black'>SELECT NEXT VALUE FOR your_seq_name;</span></pre>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<div style='border:none;border-bottom:solid #C2C2C2 1.0pt;padding:0in 0in 0in 0in'>
+
+<h3 style='margin-top:7.5pt;margin-right:0in;margin-bottom:0in;margin-left:
+0in;margin-bottom:.0001pt;border:none;padding:0in'><span style='font-size:15.5pt;
+font-family:"inherit",serif;color:black'>Generating IDs using sequence</span></h3>
+
+</div>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'> 
+<span style='color:green'>-- Create a sequence</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'> 
+<span style='color:blue'>CREATE</span> <span style='color:blue'>SEQUENCE</span>
+cities_seq START <span style='color:blue'>WITH</span> 1 INCREMENT <span
+style='color:blue'>BY</span> 1<span style='color:gray'>;</span> </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'> </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'> 
+<span style='color:green'>-- Define a table</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'> 
+<span style='color:blue'>CREATE</span> <span style='color:blue'>TABLE</span>
+cities</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas;
+color:blue'>  </span><span style='font-size:9.5pt;font-family:Consolas;
+color:gray'>(</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>    
+id <span style='color:blue'>INT</span> <span style='color:blue'>PRIMARY</span> <span
+style='color:blue'>KEY</span> <span style='color:blue'>DEFAULT</span> <span
+style='color:blue'>NEXT</span> VALUE <span style='color:blue'>FOR</span>
+cities_seq<span style='color:gray'>,</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>    
+name <span style='color:blue'>VARCHAR</span><span style='color:gray'>(</span>90<span
+style='color:gray'>)</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'> 
+<span style='color:gray'>);</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'> </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'>  
+<span style='color:green'>-- Insert a row (ID will be automatically generated)</span></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;text-autospace:none'><span style='font-size:9.5pt;font-family:Consolas'> 
+<span style='color:blue'>INSERT</span> <span style='color:blue'>INTO</span>
+cities<span style='color:blue'> </span><span style='color:gray'>(</span>name<span
+style='color:gray'>)</span> <span style='color:blue'>VALUES </span><span
+style='color:gray'>(</span><span style='color:red'>'London'</span><span
+style='color:gray'>);</span></span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Synonyms:</p>
+
+<pre style='line-height:13.15pt'><span style='color:black'>CREATE SYNONYM [ schema_name_1. ] synonym_name FOR &lt;object&gt;</span></pre><pre
+style='line-height:13.15pt'><span style='color:black'>&nbsp;</span></pre><pre
+style='line-height:13.15pt'><span style='color:black'>&lt;object&gt; :: =</span></pre><pre
+style='line-height:13.15pt'><span style='color:black'>{</span></pre><pre
+style='line-height:13.15pt'><span style='color:black'>&nbsp;&nbsp;&nbsp;&nbsp;[ server_name.[ database_name ] . [ schema_name_2 ]. object_name </span></pre><pre
+style='line-height:13.15pt'><span style='color:black'>  |  database_name . [ schema_name_2 ].| schema_name_2. ] object_name</span></pre><pre
+style='line-height:13.15pt'><span style='color:black'>}</span></pre>
+
+<p class=MsoNormal>&nbsp;</p>
+
+</div>
+
+</body>
+
+</html>
